@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Shudh India</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","on-secondary":"#ffffff","secondary-container":"#e8f5e9","on-secondary-container":"#1b5e20","tertiary":"#735c00","surface":"#FCF8F1","on-surface":"#1b1c15","surface-variant":"#e4e3d7","on-surface-variant":"#5b403d","surface-container":"#efeee3","surface-container-low":"#FDF2EE","surface-container-high":"#F0F4ED","surface-container-highest":"#e4e3d7","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","outline":"#8f6f6c","background":"#FCF8F1"}}}}</script>
+  <style>
+    .gallery-item img { transition: transform .7s ease; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-overlay { position:absolute;inset:0;background:rgba(0,0,0,.4);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem; }
+    .gallery-item:hover .gallery-overlay { opacity:1; }
+    .filter-btn { padding:.6rem 1.75rem;border-radius:9999px;font-weight:600;font-size:.875rem;border:none;cursor:pointer;transition:all .25s;background:transparent;color:var(--color-on-surface-variant); }
+    .filter-btn.active,.filter-btn:hover { background:var(--color-secondary);color:#fff; }
+  </style>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">restaurant_menu</span>Shudh India</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a><a href="gallery.html" class="active">Gallery</a><a href="package.html">Packages</a>
+      <a href="videos.html">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+    </nav>
+    <a href="getquote.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="gallery.html" class="active">Gallery</a><a href="package.html">Packages</a>
+  <a href="videos.html">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+  <a href="getquote.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Our Gallery</span>
+  <h1 class="page-hero__title">A Glimpse of Our <span class="accent">Curated</span> Events</h1>
+  <p class="page-hero__subtitle">Capturing the beauty of every celebration we've had the honour of crafting</p>
+</div>
+
+<!-- Filters -->
+<section class="section--sm">
+  <div style="display:flex;justify-content:center;padding:0 1.5rem">
+    <div style="display:flex;gap:.5rem;padding:.5rem;background:var(--color-surface-container-low);border-radius:9999px;flex-wrap:wrap;justify-content:center">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="weddings">Weddings</button>
+      <button class="filter-btn" data-filter="private">Private Events</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="section" style="padding-top:1rem">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem">
+      <div class="gallery-item" data-cat="weddings" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlq_Pnbx5E59jQfH_JbK0m3vz8zJ46rljwj1kLQzRj0DhkR5OJpVs8ZJ23iln1vjn9JiRmogit_hiR3FNBI38AXdCdLss5RgMuyULlOKcCmsi1418-vjEGboLH-WjxHtqAxxaTmSNlOPtpL17nHe4mOxTcog38HeY_AeQA7ULy2GcCMq6OEB8A2E3CFwTvMjxzGuXk_FPkEXHEARlYWC-_Da-xMKcLe1LIEkgqbFLT55Sv4qw-A093I5YKK-HSUSetGRmahjFqfb0q" alt="Banquet hall" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Weddings</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Grand Ballroom Celebration</h3></div>
+      </div>
+      <div class="gallery-item" data-cat="corporate" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5;margin-top:3rem">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz3RSUrdlDs3zZx8rBf0kM-gCDDdWX3hQA3CdSxQTdsKHlN74LSWGpuu4op7rO7NaF1nDiqNLf_HBKBomXQl4PZqo5Ek2q-U10l5KLL0FOwxkmxhSGWQQfjIDH_Abeas3cXGtJ82xJwg5CxKqibI0GMnYql40UiE975JBWD_9mx9ho4W82_NGxUCl7Kk340GFBTYwm9EImWTzve67dUwh1K_yOcDMZZNC1Y4uKyyuG6gEUqvUiW6RXjmD5k4q24xarCJWc3vmre-bK" alt="Gourmet" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Corporate</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Artisanal Appetizer Display</h3></div>
+      </div>
+      <div class="gallery-item" data-cat="private" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkVeb3IYKulr-e47VuIcBecFbwjyysVaIsbl_hGhTqZVSHJsfgtTUveyW5hsYv0ZB46M3UT16XNk0HwlhNOaEug76fQKAXc3bcfb-qoKtHDlXy50snL5uxnSt-PsCavXI8tZrAs1SdhzwEKdQ2qnkODvvTB4HmvRbtMsQsPIi4USdpu--XQc1adkMzOB5WsVTpc10seCYAAGT-n16RJ_sY1ZFn1CERQYZfr0okNxVX_PoCZWwQT3JrIsazV28LZLaO97lEdfpyd8nC" alt="Garden" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Private Events</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Sunlit Garden Soirée</h3></div>
+      </div>
+      <div class="gallery-item" data-cat="weddings" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUnrENajVqR_zvboLtSGFmkBCukdtLJCd2pTqG0pA7uUBjRACrbZf91B8jRHR8ZbvrfjWfw-8W_Gy-pJshp58h25KyYkFashZiKUOhnfOpeSemoB925S-GjL7Vor6PMneqv825jC4zIbqvmlmqhf7YsLs1bcisQ8aquz8S8IogEJZ0lCUpa7Vw0I3H9ZCpySdgdBNEF9VMqmupsvfo2hZvtYsFFLnrb3D0tufCV99FXh53x3_JCYtpOHISWst3z0urhMwChWUPpKl8" alt="Roses" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Weddings</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Floral Masterpieces</h3></div>
+      </div>
+      <div class="gallery-item" data-cat="corporate" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5;margin-top:3rem">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqJQlSUO3sUKMV-QjWaV3H78wfipGU94SRYwIm6TvTYgOuKPpkfQmRO1coVvbgsFGGDcs3wrGkJEWZMZDdgFkguPikaHFvrCzJ6lsTtqqslBlo2s_W-vGqQ3V21ZPg_GQGwKreZmCgli282PjoedbB7zEtfx-zuIaRwXlZXUZ82qVF9H1g5DEWdduzo_QABPV-JE7R7cv7Z8JF6SAUr-48On3_mSX9ZH_ncG21T4uMJ_3tlXW-_SsrmJ447Gzo6upnNdBS7VFrbXq" alt="Buffet" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Corporate</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Elevated Buffet Experience</h3></div>
+      </div>
+      <div class="gallery-item" data-cat="private" style="position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:4/5">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu5eXJso6CVUW09zenEOhjiAwI0PcbgWGNZImK8HDZnJ_rFB1Yku6xyZC9TyP5rEVzbkDa1xz-tL0MnnmaQI7zicxziJ4e9eZAEobevcnQrjaHSDIlWDXJhaRzAb5CZ4X9733ya-JjGY0cf7z_dCjNtZCKZE5uMdfFnsvhYP1jx4l4o7brh1IyAMQ3wEdYmxVXv-pgH55eS18gaGj4ghFcpCz5wd7kMW0zTNBlwUnqkr2R1aIb1HCts0KRq_JVEZhPiMIsN7pLY0Hj" alt="Tablescape" style="width:100%;height:100%;object-fit:cover"/>
+        <div class="gallery-overlay"><span style="color:rgba(255,255,255,.8);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Private Events</span><h3 style="color:#fff;font-family:var(--font-headline);font-weight:700;font-size:1.25rem">Minimalist Dining Elegance</h3></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:4rem">
+      <button class="btn btn-outline">Load More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Full-width banner -->
+<section style="position:relative;height:500px;overflow:hidden">
+  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB--wfvYwDcnYmS5TIsrXsf3S6g06jAo4zvhK1XOudxe4jOpAyJzanB2rS-xuMntz8uVxdIa9Nkkli-a-Q1009pJzO4D8G_l9JIRwzowkikng4C7fs6lAty_LrwGUOVKEdsXGp5MG3ujtIT76mtjZsUDAiEBK2QT6eLJujgIi5MRgC0oxS4RccXDp8yQGuxmWqfGi82b1HhBBTT_g_R6RQURwz7HhdvzP5kI-quilbD46Osl8LJMpnSmWGZ09dLXffZYaExnD-KtEb" alt="Grand event" style="width:100%;height:100%;object-fit:cover"/>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--color-background) 0%,transparent 60%);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:2rem">
+    <h2 style="font-family:var(--font-headline);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.5)">Crafting <span class="font-moment" style="color:var(--color-tertiary-fixed)">unforgettable</span> experiences</h2>
+    <div style="width:96px;height:4px;background:var(--color-tertiary-fixed);border-radius:4px;margin-top:1.5rem"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--color-surface-container-low);text-align:center">
+  <div class="section-inner" style="max-width:640px;margin:0 auto">
+    <h2 class="section-title" style="text-align:center">Let us create your next celebration</h2>
+    <p class="section-desc" style="text-align:center;margin-bottom:2.5rem">From intimate dinners to grand weddings, we bring Shudh India's culinary mastery to your doorstep.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+      <a href="getquote.html" class="btn btn-primary">Get Quote</a>
+      <a href="package.html" class="btn btn-secondary">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div><div class="footer-brand__logo">Shudh India</div><p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades.</p><div class="footer-socials"><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="package.html">Packages</a></li><li><a href="videos.html">Videos</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="carrer.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Our Signature</h4><div class="footer-tags"><span class="footer-tag">Aromatic Spices</span><span class="footer-tag">Farm Fresh</span><span class="footer-tag">Artisanal Plating</span><span class="footer-tag">Vegan Friendly</span></div><p class="footer-cert">View Hygiene Certification</p></div>
+  </div>
+  <div class="site-footer__bottom"><p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p><div style="display:flex;gap:1.5rem"><a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a><a href="#" style="color:#71717a;font-size:.8125rem">Terms</a></div></div>
+</footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      document.querySelectorAll('.gallery-item').forEach(item=>{
+        item.style.display=(f==='all'||item.dataset.cat===f)?'block':'none';
+      });
+    });
+  });
+</script>
+</body></html>

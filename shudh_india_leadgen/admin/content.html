@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../assets/css/global.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<title>Content Manager | Shudh India</title>
+</head>
+<body class="shudh-admin-body bg-[#131313] text-[#e5e2e1]">
+<main class="ml-64 mt-14 md:mt-16 px-3 sm:px-5 md:px-8 pb-[max(1rem,env(safe-area-inset-bottom))] min-h-[calc(100dvh-3.5rem)] md:min-h-[calc(100vh-4rem)] overflow-y-auto max-w-full min-w-0">
+  <div class="max-w-7xl mx-auto py-4 sm:py-6 lg:py-8">
+    <div class="mb-6 sm:mb-8">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Website Content Manager</h2>
+      <p class="text-stone-400 text-sm sm:text-base">Section-wise CMS with Global and Homepage scopes.</p>
+    </div>
+
+    <div class="mb-3 rounded-2xl border border-stone-800/90 bg-gradient-to-r from-stone-950/60 to-stone-900/40 p-3 sm:p-4">
+      <p class="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-secondary/90 mb-2">Step 1: Parent Section</p>
+      <div class="flex flex-wrap gap-2" id="cms-scopes">
+        <button type="button" data-tab-scope="global" class="cms-scope min-w-[150px] px-5 py-3 rounded-xl text-sm font-bold uppercase tracking-[0.18em] border border-secondary text-secondary bg-secondary/15 shadow-[0_0_0_1px_rgba(250,204,21,0.22)]">Global</button>
+        <button type="button" data-tab-scope="home" class="cms-scope min-w-[150px] px-5 py-3 rounded-xl text-sm font-bold uppercase tracking-[0.18em] border border-stone-700 text-stone-300 bg-stone-900/50">Homepage</button>
+        <button type="button" data-tab-scope="about" class="cms-scope min-w-[150px] px-5 py-3 rounded-xl text-sm font-bold uppercase tracking-[0.18em] border border-stone-700 text-stone-300 bg-stone-900/50">About Page</button>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <p class="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-stone-400 mb-2">Step 2: Section Tab</p>
+      <div class="flex flex-wrap gap-2" id="cms-tabs">
+      <button type="button" data-tab-group="global" data-tab-target="tab-global-core" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-secondary text-secondary bg-secondary/10">Global Core</button>
+      <button type="button" data-tab-group="global" data-tab-target="tab-global-nav" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Header/Nav</button>
+      <button type="button" data-tab-group="global" data-tab-target="tab-global-footer" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Footer</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-hero" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Home Hero</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-stats" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Stats</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-experiences" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Experiences</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-signature-flow" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Signature Flow</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-visual-story" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Visual Story</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-gallery-preview" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Gallery Preview</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-home-quote" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Home Quote</button>
+      <button type="button" data-tab-group="home" data-tab-target="tab-home-closing" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">Home Closing</button>
+      <button type="button" data-tab-group="about" data-tab-target="tab-about-content" class="cms-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-stone-700 text-stone-300">About Content</button>
+      </div>
+    </div>
+
+    <form id="contentForm" class="space-y-6">
+      <section id="tab-global-core" class="cms-panel bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Global Core</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div><label class="text-xs text-stone-400">Brand Name</label><input id="brandName" placeholder="Shudh India" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Phone</label><input id="contactPhone" placeholder="+91 99999 88888" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">City</label><input id="contactCity" placeholder="New Delhi, India" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+      </section>
+
+      <section id="tab-global-nav" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Global Header &amp; Navigation</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div><label class="text-xs text-stone-400">Nav Home</label><input id="homeNavHome" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Nav Gallery</label><input id="homeNavGallery" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Nav Packages</label><input id="homeNavPackages" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Nav Videos</label><input id="homeNavVideos" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Nav About</label><input id="homeNavAbout" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Nav Careers</label><input id="homeNavCareers" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Header CTA</label><input id="homeNavCta" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Mobile CTA</label><input id="homeMobileNavCta" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+      </section>
+
+      <section id="tab-global-footer" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Global Footer</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Footer Description</label><textarea id="homeFooterDesc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Quick Links Title</label><input id="homeFooterLinksTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Signature Title</label><input id="homeFooterSignatureTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link Home</label><input id="homeFooterLinkHome" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link Gallery</label><input id="homeFooterLinkGallery" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link Packages</label><input id="homeFooterLinkPackages" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link Videos</label><input id="homeFooterLinkVideos" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link About</label><input id="homeFooterLinkAbout" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Footer Link Careers</label><input id="homeFooterLinkCareers" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Tag 1</label><input id="homeFooterTag1" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Tag 2</label><input id="homeFooterTag2" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Tag 3</label><input id="homeFooterTag3" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Tag 4</label><input id="homeFooterTag4" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Certification Text</label><input id="homeFooterCert" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Call Label</label><input id="homeFooterCallLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Call Value</label><input id="homeFooterCallValue" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Email Label</label><input id="homeFooterEmailLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Email Value</label><input id="homeFooterEmailValue" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Bottom Copyright Text</label><input id="homeFooterBottomText" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Privacy Text</label><input id="homeFooterPrivacy" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Terms Text</label><input id="homeFooterTerms" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">FAQ Text</label><input id="homeFooterFaq" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+      </section>
+
+      <section id="tab-hero" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Homepage Hero</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Eyebrow</label><input id="homeHeroEyebrow" placeholder="The Art of Fine Catering" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Hero Image URL</label><input id="homeHeroImage" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Title (HTML allowed)</label><textarea id="homeHeroTitle" rows="3" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Subtitle</label><textarea id="homeHeroSubtitle" rows="3" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Primary CTA</label><input id="homeHeroPrimaryCta" placeholder="Get Quote" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Secondary CTA</label><input id="homeHeroSecondaryCta" placeholder="View Packages" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Hero Image Preview</label>
+          <img id="homeHeroImagePreview" src="" alt="Hero preview" class="mt-2 w-full max-w-md rounded-xl border border-stone-700/80 object-cover min-h-[140px] bg-stone-900/60"/>
+        </div>
+      </section>
+
+      <section id="tab-stats" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Hero &amp; Stats Numbers</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Hero Stat 1</p><input id="homeHeroStat1Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeHeroStat1Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Hero Stat 2</p><input id="homeHeroStat2Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeHeroStat2Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Hero Stat 3</p><input id="homeHeroStat3Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeHeroStat3Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Strip 1</p><input id="homeStripStat1Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeStripStat1Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Strip 2</p><input id="homeStripStat2Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeStripStat2Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Strip 3</p><input id="homeStripStat3Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeStripStat3Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2"><p class="text-xs uppercase tracking-widest text-stone-500">Strip 4</p><input id="homeStripStat4Number" class="w-full bg-stone-800 rounded-xl border-none"/><input id="homeStripStat4Label" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+      </section>
+
+      <section id="tab-experiences" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Homepage Experiences</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Eyebrow</label><input id="homeExpEyebrow" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Title (HTML allowed)</label><input id="homeExpTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Description</label><textarea id="homeExpDesc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Card 1 Image URL</label><input id="homeExpCard1Image" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Card 2 Image URL</label><input id="homeExpCard2Image" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Card 3 Image URL</label><input id="homeExpCard3Image" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Card 1</p>
+            <input id="homeExpCard1Title" placeholder="Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeExpCard1Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeExpCard1Cta" placeholder="CTA text" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Card 2</p>
+            <input id="homeExpCard2Title" placeholder="Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeExpCard2Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeExpCard2Cta" placeholder="CTA text" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Card 3</p>
+            <input id="homeExpCard3Title" placeholder="Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeExpCard3Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeExpCard3Cta" placeholder="CTA text" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div><label class="text-xs text-stone-400">Card 1 Preview</label><img id="homeExpCard1ImagePreview" src="" alt="Card 1 preview" class="mt-2 w-full rounded-xl border border-stone-700/80 object-cover min-h-[120px] bg-stone-900/60"/></div>
+          <div><label class="text-xs text-stone-400">Card 2 Preview</label><img id="homeExpCard2ImagePreview" src="" alt="Card 2 preview" class="mt-2 w-full rounded-xl border border-stone-700/80 object-cover min-h-[120px] bg-stone-900/60"/></div>
+          <div><label class="text-xs text-stone-400">Card 3 Preview</label><img id="homeExpCard3ImagePreview" src="" alt="Card 3 preview" class="mt-2 w-full rounded-xl border border-stone-700/80 object-cover min-h-[120px] bg-stone-900/60"/></div>
+        </div>
+      </section>
+
+      <section id="tab-signature-flow" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Homepage Signature Flow</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Eyebrow</label><input id="homeSignatureFlowEyebrow" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Title (HTML allowed)</label><input id="homeSignatureFlowTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Description</label><textarea id="homeSignatureFlowDesc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Feature Kicker</label><input id="homeSignatureFeatureKicker" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Feature Title</label><input id="homeSignatureFeatureTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Feature Image URL</label><input id="homeSignatureFeatureImage" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Step 1</p>
+            <input id="homeSignatureStep1Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeSignatureStep1Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeSignatureStep1Cta" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Step 2</p>
+            <input id="homeSignatureStep2Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeSignatureStep2Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeSignatureStep2Cta" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Step 3</p>
+            <input id="homeSignatureStep3Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeSignatureStep3Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+            <input id="homeSignatureStep3Cta" class="w-full bg-stone-800 rounded-xl border-none"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Feature Image Preview</label>
+          <img id="homeSignatureFeatureImagePreview" src="" alt="Signature feature preview" class="mt-2 w-full max-w-md rounded-xl border border-stone-700/80 object-cover min-h-[140px] bg-stone-900/60"/>
+        </div>
+      </section>
+
+      <section id="tab-visual-story" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Visual Story Section</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Title</label><input id="homeVisualTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Description</label><textarea id="homeVisualDesc" rows="3" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Background Image URL</label><input id="homeVisualImage" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Visual Story Image Preview</label>
+          <img id="homeVisualImagePreview" src="" alt="Visual story preview" class="mt-2 w-full max-w-md rounded-xl border border-stone-700/80 object-cover min-h-[140px] bg-stone-900/60"/>
+        </div>
+      </section>
+
+      <section id="tab-gallery-preview" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Gallery Preview Section</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Section Title (HTML allowed)</label><input id="homeGalleryPreviewTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">CTA Text</label><input id="homeGalleryPreviewCta" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Gallery Images (add one by one)</label>
+          <div id="homeGalleryPreviewImagesRows" class="space-y-2 mt-2"></div>
+          <button id="homeGalleryPreviewAddBtn" type="button" class="mt-3 px-4 py-2 rounded-lg bg-stone-800 hover:bg-stone-700 text-xs font-semibold">+ Add More Image</button>
+          <textarea id="homeGalleryPreviewImages" rows="4" class="hidden"></textarea>
+        </div>
+      </section>
+
+      <section id="tab-home-quote" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Homepage Quote Section</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Eyebrow</label><input id="homeQuoteEyebrow" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Form Title</label><input id="homeQuoteFormTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Main Title (HTML allowed)</label><input id="homeQuoteTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Panel Title</label><input id="homeQuotePanelTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Submit Button Text</label><input id="homeQuoteSubmitText" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Panel Description</label><textarea id="homeQuotePanelDesc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Call Label</label><input id="homeQuoteCallLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Call Value</label><input id="homeQuoteCallValue" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Email Label</label><input id="homeQuoteEmailLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Email Value</label><input id="homeQuoteEmailValue" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Full Name</label><input id="homeQuoteLabelName" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Phone</label><input id="homeQuoteLabelPhone" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Event Type</label><input id="homeQuoteLabelEvent" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Guests</label><input id="homeQuoteLabelGuests" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Date</label><input id="homeQuoteLabelDate" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Location</label><input id="homeQuoteLabelLocation" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Label: Requests</label><input id="homeQuoteLabelRequests" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Placeholder: Name</label><input id="homeQuotePlaceholderName" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Placeholder: Phone</label><input id="homeQuotePlaceholderPhone" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Placeholder: Guests</label><input id="homeQuotePlaceholderGuests" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Placeholder: Location</label><input id="homeQuotePlaceholderLocation" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Placeholder: Requests</label><input id="homeQuotePlaceholderRequests" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Option 1</label><input id="homeQuoteOption1" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Option 2</label><input id="homeQuoteOption2" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Option 3</label><input id="homeQuoteOption3" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Option 4</label><input id="homeQuoteOption4" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+        </div>
+      </section>
+
+      <section id="tab-home-closing" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">Homepage Closing Section</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Top Kicker</label><input id="homeClosingTitleKicker" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Top Title Main (HTML allowed)</label><input id="homeClosingTitleMain" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Top Title Accent</label><input id="homeClosingTitleAccent" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Content Eyebrow</label><input id="homeClosingContentEyebrow" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Content Title</label><input id="homeClosingContentTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Content Accent</label><input id="homeClosingContentAccent" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">CTA 1</label><input id="homeClosingCta1" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">CTA 2</label><input id="homeClosingCta2" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Media Image URL</label><input id="homeClosingMediaImage" placeholder="https://..." class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Content Description</label><textarea id="homeClosingContentDesc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Point 1</p>
+            <input id="homeClosingPoint1Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeClosingPoint1Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Point 2</p>
+            <input id="homeClosingPoint2Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeClosingPoint2Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+          </div>
+          <div class="bg-stone-950/40 rounded-xl p-4 space-y-2">
+            <p class="text-xs uppercase tracking-widest text-stone-500">Point 3</p>
+            <input id="homeClosingPoint3Title" class="w-full bg-stone-800 rounded-xl border-none"/>
+            <textarea id="homeClosingPoint3Desc" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Closing Media Preview</label>
+          <img id="homeClosingMediaImagePreview" src="" alt="Closing media preview" class="mt-2 w-full max-w-md rounded-xl border border-stone-700/80 object-cover min-h-[140px] bg-stone-900/60"/>
+        </div>
+      </section>
+
+      <section id="tab-about-content" class="cms-panel hidden bg-stone-900/40 p-5 sm:p-6 rounded-2xl space-y-4">
+        <h3 class="text-lg sm:text-xl font-semibold">About Page Content</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div><label class="text-xs text-stone-400">Hero Eyebrow</label><input id="aboutHeroEyebrow" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Hero Title (HTML allowed)</label><input id="aboutHeroTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Hero Subtitle</label><textarea id="aboutHeroSubtitle" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Vision Label</label><input id="aboutVisionLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Vision Name</label><input id="aboutVisionName" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Vision Role</label><input id="aboutVisionRole" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Vision Image URL</label><input id="aboutVisionImage" class="w-full bg-stone-800 rounded-xl border-none" placeholder="https://..."/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Vision Quote</label><textarea id="aboutVisionQuote" rows="3" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Vision Description</label><textarea id="aboutVisionDescription" rows="3" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Journey Label</label><input id="aboutJourneyLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Journey Title</label><input id="aboutJourneyTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Journey Subtitle</label><textarea id="aboutJourneySubtitle" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+          <div><label class="text-xs text-stone-400">Journey Highlight Label</label><input id="aboutJourneyHighlightLabel" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Journey Highlight Year</label><input id="aboutJourneyHighlightYear" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Journey Highlight Text</label><input id="aboutJourneyHighlightText" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div><label class="text-xs text-stone-400">Pillars Title</label><input id="aboutPillarsTitle" class="w-full bg-stone-800 rounded-xl border-none"/></div>
+          <div class="md:col-span-2"><label class="text-xs text-stone-400">Pillars Subtitle</label><textarea id="aboutPillarsSubtitle" rows="2" class="w-full bg-stone-800 rounded-xl border-none"></textarea></div>
+        </div>
+        <div>
+          <label class="text-xs text-stone-400">Vision Image Preview</label>
+          <img id="aboutVisionImagePreview" src="" alt="Vision preview" class="mt-2 w-full max-w-md rounded-xl border border-stone-700/80 object-cover min-h-[140px] bg-stone-900/60"/>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="text-sm font-semibold uppercase tracking-[0.12em] text-stone-300">Journey Milestones (Add Unlimited)</h4>
+            <button id="aboutJourneyAddBtn" type="button" class="px-4 py-2 rounded-lg bg-stone-800 hover:bg-stone-700 text-xs font-semibold">+ Add Journey Item</button>
+          </div>
+          <div id="aboutJourneyRows" class="space-y-3"></div>
+          <textarea id="aboutJourneyItems" class="hidden"></textarea>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between gap-3">
+            <h4 class="text-sm font-semibold uppercase tracking-[0.12em] text-stone-300">Team Cards (Add Unlimited)</h4>
+            <button id="aboutTeamAddBtn" type="button" class="px-4 py-2 rounded-lg bg-stone-800 hover:bg-stone-700 text-xs font-semibold">+ Add Team Card</button>
+          </div>
+          <div id="aboutTeamRows" class="space-y-3"></div>
+          <textarea id="aboutTeamCards" class="hidden"></textarea>
+        </div>
+      </section>
+
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+        <button type="submit" class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#ffb4a8] to-[#b52619] font-bold w-full sm:w-auto">Save All Content</button>
+        <p id="saveMsg" class="text-emerald-400 text-sm"></p>
+      </div>
+    </form>
+  </div>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/admin-auth-guard.js"></script>
+<script src="../assets/js/admin-shell.js"></script>
+<script src="../assets/js/content-admin.js"></script>
+</body></html>

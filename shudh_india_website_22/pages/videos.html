@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos | Shudh India</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","tertiary":"#735c00","surface":"#FCF8F1","on-surface":"#1b1c15","on-surface-variant":"#5b403d","surface-container-low":"#FDF2EE","surface-container":"#efeee3","surface-container-high":"#F0F4ED","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","background":"#FCF8F1"}}}}</script>
+  <style>
+    .video-card { position:relative;overflow:hidden;border-radius:1rem;aspect-ratio:16/9;cursor:pointer;background:#1b1c15; }
+    .video-card img { width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s; }
+    .video-card:hover img { transform:scale(1.06);opacity:.7; }
+    .video-overlay { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem; }
+    .play-btn { width:64px;height:64px;border-radius:9999px;background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 32px rgba(175,16,26,.4);transition:transform .25s; }
+    .video-card:hover .play-btn { transform:scale(1.15); }
+    .video-info { position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(27,28,21,.85) 0%,transparent 100%); }
+  </style>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">restaurant_menu</span>Shudh India</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a><a href="gallery.html">Gallery</a><a href="package.html">Packages</a>
+      <a href="videos.html" class="active">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+    </nav>
+    <a href="getquote.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="gallery.html">Gallery</a><a href="package.html">Packages</a>
+  <a href="videos.html" class="active">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+  <a href="getquote.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Behind the Scenes</span>
+  <h1 class="page-hero__title">Our <span class="accent">Story</span> in Motion</h1>
+  <p class="page-hero__subtitle">Witness the artistry, passion, and magic behind every Shudh India event</p>
+</div>
+
+<!-- Featured Video -->
+<section class="section">
+  <div class="section-inner">
+    <div style="margin-bottom:1.5rem"><div class="section-eyebrow">Featured</div><h2 class="section-title">The <span class="accent">Grand</span> Experience</h2></div>
+    <div class="video-card" style="aspect-ratio:16/7;border-radius:1.25rem">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoRtVTZiICt-sjIzLQgzg-fv3rTmAldI-OuAW1rWNSzEQi3xgGE2YE3nl6NVJBwlO6t7f3d7FDT-FK91D9ujV-ng80uKpZiP3doutBV3wLE7CkbQwsbMsUuAwDAOZM_xR7tD11dJqiAmm1oM53jHn1ti6qc0fZsJxIDKjKtm4vsvF-1fXbOtm7he1ThKbqVNganOxMqk3738esO01nPqnHQyyciUPZoXmthpPRgiAhrsPQQo6l3JoAPvJ79IsgDUjLk-64WjBJVDwS" alt="Grand event video thumbnail"/>
+      <div class="video-overlay">
+        <div class="play-btn"><span class="material-symbols-outlined" style="font-size:2rem;font-variation-settings:'FILL' 1">play_arrow</span></div>
+        <p style="color:#fff;font-weight:600;font-size:.9375rem;text-shadow:0 2px 8px rgba(0,0,0,.6)">Watch Full Event Reel — 4:32</p>
+      </div>
+      <div class="video-info">
+        <h3 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1.375rem;margin-bottom:.25rem">Royal Wedding Showcase 2024</h3>
+        <p style="color:rgba(255,255,255,.7);font-size:.875rem">Grand ballroom · 800 guests · Full service catering</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Grid -->
+<section class="section" style="background:var(--color-surface-container-low);padding-top:2rem">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-eyebrow">More Videos</div>
+      <h2 class="section-title" style="text-align:center">Explore Our <span class="accent">Portfolio</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.75rem">
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQdcwPnEgti_eNwXygB1GjOgVsCuuXvctPNu2oMq889mOsVb7qYZDI13kaykiGLrjs59q6GQNvBI6ylHZl3oKTLY6hEala7q1pqUAM-fdZ2Pw3QBGXMP79tyhBjHioQh7uDoABj3ZfklOmRo8oJ2quC2mKrors2Zh818N_lYoZy0vBuUW59UTSEqnguwE7xOPh7oqILw-NvJUcqvWUHMaQR1-RwBn7Zy2jUqbIrXs2SzTNCUdSyNUZW6NId7wLFEQP3HIm6C-Wt_y" alt="Wedding"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">Wedding Ceremony Highlights</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">3:14 · Weddings</p></div>
+      </div>
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTSqM7uWE28Y94ifoUw762hSgp8ZZvkea0kV5KipOkeWnsAzo6KbVq-2IJGvhdx2sqEN383i9tkM6OamInp0aWtYQ2NiI7dkxGGm8x1CQKt9xK6doe43VV7ybGf2MmsgwrjPLl7ylDvMlg2jNVsTWyP23vbwrM5T7WTgpnp8yyHd90ZGjY6GQhiQXNnkYcXt1xaF1VwwqFAZd6-Gy_TciZBev22U7w5D-oUTSVjfPoQQiwVLYZ76lulgZANVBiHP1lSx_YiefNjhbd" alt="Corporate"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">Corporate Summit Setup</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">2:08 · Corporate</p></div>
+      </div>
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX0iNUneTNT20W_3huiLf96Azu0X9_6zHRGXvwDnqMwUc0VdJhi6DGF-vdUCZYoXLxH9FodA5g8Rhyd3wZlPXnh_4Ev_1XjvZgSy3M18H0kAlKQ49OWd0sng5YskuifSVOSfb_0M5ZmekMqG1anfaxd0kyj4p8Ku56x799DbPjLoPwGwqfDW8SMCxBdsgY6VGz_izKfdDcXsKXfXqiTbPlxsDkr6HMj_F_OR5wf81cXaNVZHHi3wZBcBSFPD3aA2Z6NDpEgINh_Wiz" alt="Private"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">Intimate Dinner Party</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">1:55 · Private Events</p></div>
+      </div>
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClAMnA0HlVwxdDnW78jBzahtn4VF3YsVQ4jwJIYYGlrcVefPXF2AOC1T-5ZaDCZjcObmnFxMKLlwgiet0l1bUCahE6KB1MKGXeqG1TSNG-IMq1IpLej5k_Ek7yRW9e8n6twc6LmzEjYq022pYyJrbMr8RFcPtG4f2TuFUrXj-UsXOdoJR6sYJ8ZL1C0zoQSC6vSd5ZrrBqe9t2KrkIkz_xA40G1EJbu0PHs_1ClL73XiRleMAMFGxS1lK2VCKy6_IsvXWTBkaVcFmB" alt="Food artistry"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">The Art of Plating</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">4:50 · Behind the Scenes</p></div>
+      </div>
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiFlIubedmGz5PYLuybHYDTzV2mglY9gyOcI5N7tR9dTxY7KyuMs-CxHqqaDFa4X6V3eiMptlBjMlZ-yDm95juVhTkRicxOgV2mwbsYFRPAIxL7LpaCl9IjLM4W30EIGkgQgn_DLIFlVfjlCWV34VfHkBOqveC6venxktyNtBQJazqR5hvnqn-hfqc4Mjzd4smHDh1MQZErkcYcChZmtIJ2UiZFrkMdWP613cm0t8GRxlZi2TSUvH21XuB4Sa9wcMc4SEcjPPl2c4u" alt="Mithai"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">Mithai Making Masterclass</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">6:22 · Culinary Arts</p></div>
+      </div>
+      <div class="video-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqJQlSUO3sUKMV-QjWaV3H78wfipGU94SRYwIm6TvTYgOuKPpkfQmRO1coVvbgsFGGDcs3wrGkJEWZMZDdgFkguPikaHFvrCzJ6lsTtqqslBlo2s_W-vGqQ3V21ZPg_GQGwKreZmCgli282PjoedbB7zEtfx-zuIaRwXlZXUZ82qVF9H1g5DEWdduzo_QABPV-JE7R7cv7Z8JF6SAUr-48On3_mSX9ZH_ncG21T4uMJ_3tlXW-_SsrmJ447Gzo6upnNdBS7VFrbXq" alt="Buffet"/>
+        <div class="video-overlay"><div class="play-btn" style="width:52px;height:52px"><span class="material-symbols-outlined" style="font-size:1.5rem;font-variation-settings:'FILL' 1">play_arrow</span></div></div>
+        <div class="video-info"><h4 style="font-family:var(--font-headline);font-weight:700;color:#fff;font-size:1rem;margin-bottom:.2rem">Live Buffet Station Setup</h4><p style="color:rgba(255,255,255,.7);font-size:.8125rem">2:47 · Events</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Inspired by What You've Seen?</h2>
+  <p>Let us create a breathtaking culinary experience for your next celebration.</p>
+  <a href="getquote.html" class="btn" style="background:#fff;color:var(--color-primary);padding:.9rem 2.5rem;font-size:1rem;margin:0 auto">Get Your Quote</a>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div><div class="footer-brand__logo">Shudh India</div><p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades.</p><div class="footer-socials"><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="package.html">Packages</a></li><li><a href="videos.html">Videos</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="carrer.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div style="display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem"><p style="font-size:.875rem;color:#71717a">+91 98765 43210</p><p style="font-size:.875rem;color:#71717a">concierge@shudhindia.com</p></div></div>
+  </div>
+  <div class="site-footer__bottom"><p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p><div style="display:flex;gap:1.5rem"><a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a><a href="#" style="color:#71717a;font-size:.8125rem">Terms</a></div></div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));</script>
+</body></html>

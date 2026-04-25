@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Quote | Shudh India</title>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","tertiary":"#735c00","surface":"#FCF8F1","on-surface":"#1b1c15","on-surface-variant":"#5b403d","surface-container-low":"#FDF2EE","surface-container":"#efeee3","surface-container-high":"#F0F4ED","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","background":"#FCF8F1"}}}}</script>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<script src="../assets/js/shudh-first-paint.js"></script>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo" aria-label="Shudh India Home"><img src="../assets/logo/logonew.png" alt="Shudh India" class="site-logo__image" /></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="packages.html">Packages</a>
+      <a href="videos.html">Videos</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="inquiry.html" class="site-header__cta active">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="packages.html">Packages</a>
+  <a href="videos.html">Videos</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+  <a href="inquiry.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Let's Connect</span>
+  <h1 class="page-hero__title">Get Your <span class="accent">Quote</span></h1>
+  <p class="page-hero__subtitle">Tell us about your dream event and we'll craft a personalised culinary proposal</p>
+</div>
+
+<section class="section" style="padding-top:2rem">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-6 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+    <div class="lg:col-span-5 sticky top-24 hidden lg:block">
+      <div class="relative group">
+        <div class="absolute -inset-3 bg-tertiary/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+        <img class="relative rounded-xl w-full h-[calc(100vh-7.5rem)] object-cover shadow-[0px_40px_80px_rgba(91,64,61,0.12)]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiKMfT4dJ6zcnkT1jzbOVg03rvTZUrKMib_VglE69nhPWdPNovuOaTY2FSyQ_br9B2c1KFxKeei4aj_fKKTCNvhxijTUrrnjJ7CwvI8MbM8SjXmgyuR8_A009F6OupD2k_3D_-lvWCx6jo3_oIgi6PWpI913BhVuut2hup22IXToLq9MZ2KVMBnvncZ_CpVGbRF2BGxYlTedsZyzGXGlWJxMtMMYfvBRRsdd1gCsqHlbB_8WbXK5FGhR9QLiSBrzI6HBmS5fCKbVqQ"
+          alt="Luxurious Indian wedding banquet"/>
+        <div class="absolute bottom-6 left-6 right-6 p-5 bg-surface/90 backdrop-blur-md rounded-lg">
+          <p class="font-moment text-tertiary text-2xl mb-1">Culinary Artistry</p>
+          <h3 class="font-headline font-bold text-lg text-on-surface">Crafting memories through flavors since 1998.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-5 sm:p-7 md:p-10 shadow-[0px_20px_40px_rgba(91,64,61,0.08)] border border-outline-variant/20">
+      <header class="mb-8">
+        <h3 class="text-3xl md:text-4xl font-headline font-extrabold tracking-tight text-on-surface mb-2">
+          Get Your <span class="font-moment text-primary italic font-normal">Custom</span> Quote
+        </h3>
+        <p class="text-on-surface-variant text-base font-body italic opacity-80">Tell us about your event</p>
+      </header>
+
+      <form class="shudh-inquiry-form space-y-8" data-source="website-inquiry-page">
+        <input type="hidden" name="eventType" value="Wedding">
+        <input type="hidden" name="guestCount" value="150">
+
+        <section>
+          <label class="block text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Select Event Type</label>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <button class="event-btn active group relative overflow-hidden rounded-lg aspect-square border-2 border-primary ring-4 ring-primary/10 transition-all" type="button" data-event="Wedding">
+              <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLy3Ow6xE3teLf4wZ3TrMn_nUcJVwIG60mYWrVg8fygfHrGY8R2oHMyvhLR7EYE4u9XflFqe8lt2bIeqrmY5FfN09vDtz_Yq9kpUmNTXWjUiwZujF17oKuJBi78RfWNIjuAUS4OZZvGu2wbfB-e7Cq2tVd_O2owy4xvUqHwpWwus7q7j-jpaF6E2UdmrPU2G9Ah4ogDHpxaWGl1Wqkh1E0ognfCmUKaUl-_bIFcPkrW0sxYsKJeeFUco-edeHuKq-pD2gnvJE82zGh" alt="Wedding"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 text-white font-bold text-xs">Wedding</span>
+              <div class="check-icon absolute top-2 right-2 bg-primary text-white p-1 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-xs" style="font-size:14px;">check</span>
+              </div>
+            </button>
+            <button class="event-btn group relative overflow-hidden rounded-lg aspect-square border-2 border-transparent hover:border-outline-variant transition-all" type="button" data-event="Birthday">
+              <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBET16VsmpQdWpLM_gZjZmim6UIfPtXG5HRqHcP5phJdcA543Jv4x9kSoTiJdMoWu6httskLWkId4d0mP5jf_dCNytSum07x2Aeo5VywrlQ9IMqYCr3OgUVPLdOmYPdJOlvnGVr4tzQS01DVpueAJRe-iC_htS-0vN-KfdXZQxUgeKcNBl_tRb9ZSmSYP6G70dPwAlCZlIvJT9yP9IKbJAdUS1GcTg5u9FYtAM-LMqyDxTIqV0P2BhY4S58IFXFubqqWaI_wKh03cvO" alt="Birthday"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 text-white font-bold text-xs">Birthday</span>
+              <div class="check-icon hidden absolute top-2 right-2 bg-primary text-white p-1 rounded-full items-center justify-center">
+                <span class="material-symbols-outlined text-xs" style="font-size:14px;">check</span>
+              </div>
+            </button>
+            <button class="event-btn group relative overflow-hidden rounded-lg aspect-square border-2 border-transparent hover:border-outline-variant transition-all" type="button" data-event="Corporate">
+              <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAzEFVdC3PUcSwQJqDVjOJWIFw7j956YxaMFazRgfZrhYj7hRCaXiTXiBE3nK7so3v90n5kURIjTxOXMZT4Ob6DJL6nMJJ3GevDqgQCD0liFApDsmhabl-0NpOYiujU9MXHLPBr61QOPjhxwKFQQmec-zAYiNbmZPTkYBQDiDPPJBOR3SqAc0Ag572vuFL0_y9g-P2iy-1P7h84IXHzanY13nIXGHlXNbHrudWT8fr_EByzexIfXemHKyOQnt9LLO5PTEmrRS-58Tn" alt="Corporate"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 text-white font-bold text-xs">Corporate</span>
+              <div class="check-icon hidden absolute top-2 right-2 bg-primary text-white p-1 rounded-full items-center justify-center">
+                <span class="material-symbols-outlined text-xs" style="font-size:14px;">check</span>
+              </div>
+            </button>
+            <button class="event-btn group relative overflow-hidden rounded-lg aspect-square border-2 border-transparent hover:border-outline-variant transition-all" type="button" data-event="Private Event">
+              <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiLIElYdvpfheBV3JQ7hrMOhPrScdEXPOt0L7bCyhrtkXGHkk4mVyK2bGScgvVN-TVL7I4NzUWx0iOFQ05qqTRg41EZVkcI58gF8cf-bEpx3RuNsFVVkMk00X5nCgaLOD2arpyEshXEhRlYNj8ve8AcNtSwd7PhnZeqvkaJg-6pozibthENXmTUE5CFLc9RJ5zoZkWC2IP_cx3-tyPlu-yymk-5SrIh46j4MZkU8eskONRWAqQdo7xIRAzm1UeeXpR42AIfRs2OPsp" alt="Private Event"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 text-white font-bold text-xs">Private Event</span>
+              <div class="check-icon hidden absolute top-2 right-2 bg-primary text-white p-1 rounded-full items-center justify-center">
+                <span class="material-symbols-outlined text-xs" style="font-size:14px;">check</span>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <label class="block text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Expected Guest Count</label>
+          <div class="flex flex-wrap gap-3">
+            <button class="guest-btn px-6 py-2.5 rounded-full border border-outline-variant bg-surface hover:bg-surface-container transition-all font-semibold text-sm" type="button" data-guests="80">50-100</button>
+            <button class="guest-btn active px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-container font-bold shadow-md scale-105 text-sm" type="button" data-guests="150">100-200</button>
+            <button class="guest-btn px-6 py-2.5 rounded-full border border-outline-variant bg-surface hover:bg-surface-container transition-all font-semibold text-sm" type="button" data-guests="350">200-500</button>
+            <button class="guest-btn px-6 py-2.5 rounded-full border border-outline-variant bg-surface hover:bg-surface-container transition-all font-semibold text-sm" type="button" data-guests="700">500+</button>
+          </div>
+        </section>
+
+        <section>
+          <label class="block text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-4">Dining Style</label>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <button class="dining-btn flex flex-col gap-2.5 group text-left" type="button">
+              <div class="dining-img-wrap relative h-28 overflow-hidden rounded-lg transition-all">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYF7HEcqRlHo3OefqAguqYpk49mAMCfNs_PQWSDYHENcLL3-i88BSru-DSjg_7I0_Op0ZIy-BgOlm3b0Xj7M0tbrpZFnBaFXCPCNX1UPY2TJGCPOw_QrWyi9wTtiz4sOZPwfmzwjFnczAbaAFi23Bj8bnMkuLIsS75k7IEtlV-TowMAO8teBLjfLFS1IMpHXveTxL_yl8Xxi5UhH8xiaRWj5P4FBOH_wywDI4ZlGhhcTSGUZGtooksERg-8pVU5mA0175ws8zwLgXg" alt="Buffet Setup"/>
+                <div class="selected-badge hidden absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-[10px] font-bold">SELECTED</div>
+              </div>
+              <div>
+                <h4 class="font-bold text-on-surface text-sm">Buffet Setup</h4>
+                <p class="text-xs text-on-surface-variant opacity-70">A grand spread of choices</p>
+              </div>
+            </button>
+            <button class="dining-btn active flex flex-col gap-2.5 group text-left" type="button">
+              <div class="dining-img-wrap relative h-28 overflow-hidden rounded-lg ring-2 ring-primary transition-all">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7EvG5XFzRnUTLOuJxqSJ94aVSsvmNW-emY4o2yxPjcIe_qLcUr4Q5_AICqCInEUwW-C2M1Fn_AsIAgOq26Hz1TaxjpfonMhNTsLKLuM8YPaaUmH5JC-2QlemhpETyQBt5FJ7H0WpRth58EqFez4fW6m3FBPnabyktqPaYsLJpbyJcGaBXTCndgV-bsarJtTQBn1e91r50mOUBPMsg9EspgnD2FXOqCIEhRk87Lrpp1d62AcPP3fVW10QUL_Di6u1H3chqOoz3zxiL" alt="Premium Plated"/>
+                <div class="selected-badge absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-[10px] font-bold">SELECTED</div>
+              </div>
+              <div>
+                <h4 class="font-bold text-on-surface text-sm">Premium Plated</h4>
+                <p class="text-xs text-on-surface-variant opacity-70">Sophisticated table service</p>
+              </div>
+            </button>
+            <button class="dining-btn flex flex-col gap-2.5 group text-left" type="button">
+              <div class="dining-img-wrap relative h-28 overflow-hidden rounded-lg transition-all">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdnqQNacqnpAS15CNJ9KM2zOxZwgI_5tAv3suL9snhCzrUcCUaSyjBFXAdHdi9WAve_Lo20Ym3_5erySmAojkp9B4zUrSx_wcDy4Uf8GzHSTeGFj8K8Df4CCbXb4bd1ob2ciCniKcIxmk2t1KyJSulJE4h4qwSZrsJKdsauvXkHUakoYut5gzzDqlo6gGlMVqtWk-UTC4IN7Pg3K7ubWE3XHqTVTr9f--L2Zw11TK6WXk93DMv-HJHKbhj12y1bNaSKsDkX1YSN41t" alt="Live Counters"/>
+                <div class="selected-badge hidden absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-[10px] font-bold">SELECTED</div>
+              </div>
+              <div>
+                <h4 class="font-bold text-on-surface text-sm">Live Counters</h4>
+                <p class="text-xs text-on-surface-variant opacity-70">Interactive food experience</p>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="relative">
+            <label class="form-label">Full Name</label>
+            <input class="form-input" name="name" placeholder="Full Name" type="text" required />
+          </div>
+          <div class="relative">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" name="phone" placeholder="Phone Number" type="tel" required />
+          </div>
+          <div class="relative">
+            <label class="form-label">Event Date</label>
+            <input class="form-input" name="date" type="date" />
+          </div>
+          <div class="relative">
+            <label class="form-label">Event Location</label>
+            <input class="form-input" name="location" placeholder="City / Venue" type="text" />
+          </div>
+        </section>
+
+        <section>
+          <label class="form-label" for="requirementsField">Special Requirements</label>
+          <textarea class="form-textarea" id="requirementsField" name="requirements" placeholder="Tell us your requirements (e.g., Dietary preferences, specific menu items...)" rows="4"></textarea>
+        </section>
+
+        <p data-form-msg class="text-sm font-semibold text-primary min-h-[1.2rem]"></p>
+
+        <div class="pt-1">
+          <button class="w-full py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-white text-base font-bold shadow-[0px_20px_40px_rgba(175,16,26,0.2)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3" type="submit">
+            Get My Quote
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+          <div class="flex items-center justify-center gap-2 mt-4 text-on-surface-variant">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">verified</span>
+            <p class="text-xs sm:text-sm font-body">We will contact you within 24 hours</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us strip -->
+<section class="section--sm" style="background:var(--color-surface-container-low)">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center">
+      <div><span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-primary);margin-bottom:.5rem;display:block">reply_all</span><p style="font-weight:700;font-size:.9375rem;margin-bottom:.25rem">Quick Response</p><p style="color:var(--color-on-surface-variant);font-size:.875rem">Within 24 hours</p></div>
+      <div><span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-secondary);margin-bottom:.5rem;display:block">task_alt</span><p style="font-weight:700;font-size:.9375rem;margin-bottom:.25rem">No Obligation</p><p style="color:var(--color-on-surface-variant);font-size:.875rem">Free consultation</p></div>
+      <div><span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-tertiary);margin-bottom:.5rem;display:block">tune</span><p style="font-weight:700;font-size:.9375rem;margin-bottom:.25rem">Fully Customised</p><p style="color:var(--color-on-surface-variant);font-size:.875rem">Tailored to your needs</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="footer-brand__logo"><img src="../assets/logo/logonew.png" alt="Shudh India" class="footer-brand__image" /></div>
+      <p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades. We combine ancestral recipes with avant-garde presentation.</p>
+      <div class="footer-socials">
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">thumb_up</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Signature</h4>
+      <div class="footer-tags">
+        <span class="footer-tag">Aromatic Spices</span>
+        <span class="footer-tag">Farm Fresh</span>
+        <span class="footer-tag">Artisanal Plating</span>
+        <span class="footer-tag">Vegan Friendly</span>
+      </div>
+      <p class="footer-cert">View Hygiene Certification</p>
+      <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Call Us:</strong> +91 98765 43210</p>
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Email:</strong> concierge@shudhindia.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p>
+    <div style="display:flex;gap:1.5rem">
+      <a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">Terms</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">FAQ</a>
+    </div>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../assets/js/public-site.js"></script>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+
+  (function () {
+    var form = document.querySelector('form.shudh-inquiry-form[data-source="website-inquiry-page"]');
+    if (!form) return;
+
+    var eventInput = form.querySelector('input[name="eventType"]');
+    var guestInput = form.querySelector('input[name="guestCount"]');
+
+    form.querySelectorAll('.event-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        form.querySelectorAll('.event-btn').forEach(function (b) {
+          b.classList.remove('active', 'border-primary', 'ring-4', 'ring-primary/10');
+          b.classList.add('border-transparent');
+          var c = b.querySelector('.check-icon');
+          if (c) {
+            c.classList.add('hidden');
+            c.classList.remove('flex');
+          }
+        });
+        btn.classList.add('active', 'border-primary', 'ring-4', 'ring-primary/10');
+        btn.classList.remove('border-transparent');
+        var check = btn.querySelector('.check-icon');
+        if (check) {
+          check.classList.remove('hidden');
+          check.classList.add('flex');
+        }
+        if (eventInput) eventInput.value = btn.getAttribute('data-event') || '';
+      });
+    });
+
+    form.querySelectorAll('.guest-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        form.querySelectorAll('.guest-btn').forEach(function (b) {
+          b.classList.remove('active', 'bg-secondary-container', 'text-on-secondary-container', 'font-bold', 'shadow-md', 'scale-105');
+          b.classList.add('border', 'border-outline-variant', 'bg-surface', 'font-semibold');
+        });
+        btn.classList.add('active', 'bg-secondary-container', 'text-on-secondary-container', 'font-bold', 'shadow-md', 'scale-105');
+        btn.classList.remove('border', 'border-outline-variant', 'bg-surface');
+        if (guestInput) guestInput.value = btn.getAttribute('data-guests') || '';
+      });
+    });
+
+    form.querySelectorAll('.dining-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        form.querySelectorAll('.dining-btn').forEach(function (b) {
+          b.classList.remove('active');
+          var wrap = b.querySelector('.dining-img-wrap');
+          var badge = b.querySelector('.selected-badge');
+          if (wrap) wrap.classList.remove('ring-2', 'ring-primary');
+          if (badge) badge.classList.add('hidden');
+        });
+        btn.classList.add('active');
+        var activeWrap = btn.querySelector('.dining-img-wrap');
+        var activeBadge = btn.querySelector('.selected-badge');
+        if (activeWrap) activeWrap.classList.add('ring-2', 'ring-primary');
+        if (activeBadge) activeBadge.classList.remove('hidden');
+      });
+    });
+  })();
+</script>
+</body></html>

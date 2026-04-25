@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../assets/css/global.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffb4a8",
+                        "inverse-primary": "#b52619",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-container": "#e34836",
+                        "on-secondary": "#3c2f00",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#342800",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-tertiary": "#3c2f00",
+                        "on-surface": "#e5e2e1",
+                        "primary-container": "#340000",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "on-primary": "#690000",
+                        "surface-dim": "#131313",
+                        "secondary": "#e9c349",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#514443",
+                        "outline": "#9e8d8c",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-surface-variant": "#d6c2c1",
+                        "on-primary-fixed": "#410000",
+                        "tertiary-fixed": "#ffe088",
+                        "tertiary": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "secondary-container": "#af8d11",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#241a00",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#ffdad4",
+                        "inverse-on-surface": "#313030",
+                        "surface": "#131313",
+                        "tertiary-container": "#cba72f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .editorial-title {
+            font-family: 'Manrope', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="shudh-admin-body">
+<!-- SideNavBar Component -->
+<aside class="bg-stone-950 flex flex-col h-full py-8 px-4 h-screen w-64 fixed left-0 top-0 z-50 font-manrope tracking-tight">
+<div class="mb-10 px-2">
+<h1 class="text-xl font-bold tracking-widest text-[#e9c349] uppercase">The Culinary Noir</h1>
+<p class="text-[10px] text-stone-500 mt-1 uppercase tracking-[0.2em]">Private Sommelier Mode</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="dashboard.html"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-[#e9c349] font-semibold border-r-4 border-[#e9c349] bg-stone-900/50 transition-colors duration-200" href="packages.html"><span class="material-symbols-outlined mr-3">inventory_2</span>Packages</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="leads.html"><span class="material-symbols-outlined mr-3">contact_mail</span>Leads / Inquiries</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="gallery.html"><span class="material-symbols-outlined mr-3">photo_library</span>Gallery</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="content.html"><span class="material-symbols-outlined mr-3">edit_document</span>Content Manager</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="settings.html"><span class="material-symbols-outlined mr-3">settings</span>Settings</a>
+</nav>
+<div class="mt-auto px-4 py-4 bg-stone-900/30 rounded-2xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center overflow-hidden">
+<img alt="Catering Admin Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional chef in a black uniform with a confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2abWNe0zOcs_GHOGNl1QiQK_rXuLhQd6js8eGX7gKJ8_kGo51x6YJmi0da1VR8-__hOK7jhRSbwOdONGrR41qLuQGfjo_EgXIb6TaN1paJOWl2A4b3swz81m7f-FgmHuBb0aYWJSjl8Sr-Lq9rYFgEFITAEJGYxPfJiosbVp_YhINXXhDea726-VvnWWFtB1wzfRL251pIBa-ap7fLa-1vyrz-tamg0BTSUN397f7BI49VAjN_UnpWYagrQxFkwYgrMHNSz-8eBjz"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Admin</p>
+<p class="text-[10px] text-stone-500">Master Curator</p>
+</div>
+</div>
+<div class="mt-4 px-4"><a href="../website/index.html" class="flex items-center gap-2 text-stone-600 hover:text-stone-400 text-xs tracking-wider py-2"><span class="material-symbols-outlined text-sm">arrow_back</span>View Website</a></div></aside>
+<!-- TopNavBar Component -->
+<header class="bg-stone-900/60 backdrop-blur-xl flex items-center justify-between px-8 z-40 fixed top-0 right-0 w-[calc(100%-16rem)] h-16 font-inter text-sm shadow-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-500 text-lg">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-[#e9c349]/40 transition-all placeholder:text-stone-600" placeholder="Search packages..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-stone-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-on-primary-container rounded-full"></span>
+</button>
+<div class="flex items-center gap-3 border-l border-stone-800 pl-6">
+<span class="text-stone-300 font-medium">Admin Dashboard</span>
+<span class="material-symbols-outlined text-stone-500" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-14 md:mt-16 p-3 sm:p-5 md:p-8 min-h-[calc(100dvh-4rem)] bg-surface-container-low overflow-y-auto max-w-full min-w-0 pb-[max(1rem,env(safe-area-inset-bottom))]">
+<!-- Header & Action Row -->
+<div class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end mb-8 md:mb-12">
+<div class="min-w-0">
+<p class="text-secondary text-xs font-bold uppercase tracking-[0.2em] mb-2">Service Architecture</p>
+<h2 class="editorial-title text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Catering Packages</h2>
+</div>
+<button id="open-add-package" type="button" class="bg-gradient-to-tr from-inverse-primary to-on-primary-container text-on-surface px-5 sm:px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-on-primary-container/20 w-full sm:w-auto shrink-0"><span class="material-symbols-outlined" data-icon="add">add</span> Add New Package </button>
+</div>
+<!-- Packages from Firestore -->
+<div id="admin-packages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 w-full min-w-0">
+<p class="col-span-full text-center py-12 text-stone-500">Loading packages…</p>
+</div>
+<!-- Table View: desktop only (mobile uses card grid above) -->
+<div class="hidden md:block mt-10 lg:mt-16 bg-surface-container rounded-2xl lg:rounded-[2rem] overflow-hidden border border-stone-800/40">
+<div class="px-4 sm:px-6 lg:px-8 py-4 lg:py-6 flex justify-between items-center border-b border-stone-800 gap-3">
+<div class="min-w-0">
+<h4 class="editorial-title text-lg lg:text-xl font-bold">Quick Overview</h4>
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mt-1">Drag rows to reorder website packages</p>
+</div>
+<div class="flex gap-4 shrink-0">
+<button type="button" class="text-stone-500 hover:text-white transition-colors" aria-label="Filter">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto shudh-table-wrap">
+<table class="w-full text-left border-collapse min-w-[720px]">
+<thead>
+<tr class="text-[10px] uppercase tracking-widest text-stone-500">
+<th class="px-4 lg:px-8 py-5 font-bold">Package Name</th>
+<th class="px-4 lg:px-8 py-5 font-bold">Display Order</th>
+<th class="px-4 lg:px-8 py-5 font-bold">Highlights Count</th>
+<th class="px-4 lg:px-8 py-5 font-bold">Visibility</th>
+<th class="px-4 lg:px-8 py-5 font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody id="admin-packages-table-body" class="text-sm">
+<tr><td colspan="5" class="px-4 lg:px-8 py-8 text-center text-stone-500">Loading…</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class="md:hidden mt-6 text-center text-[11px] text-stone-500 px-2">Tip: use the cards above to edit packages on mobile. Row reorder is available on larger screens.</p>
+</main>
+<!-- Add Package Modal Overlay (Mockup Visible) -->
+<div id="add-package-modal" class="hidden fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-stone-950/80 backdrop-blur-md">
+<div class="bg-surface-container-high w-full max-w-lg max-h-[95dvh] sm:max-h-[90vh] rounded-t-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col mb-0 sm:mb-auto">
+<div class="p-5 sm:p-8 border-b border-stone-800 flex justify-between items-center gap-3">
+<h3 id="package-modal-title" class="editorial-title text-lg sm:text-2xl font-bold min-w-0 pr-2">New Catering Concept</h3>
+<button id="close-package-modal" type="button" class="text-stone-500 hover:text-white transition-colors"><span class="material-symbols-outlined">close</span></button>
+</div>
+<form id="package-modal-form" class="p-5 sm:p-8 space-y-5 sm:space-y-6 overflow-y-auto max-h-[calc(95dvh-120px)] sm:max-h-[calc(90vh-100px)] overscroll-contain">
+<input id="pkg-modal-id" type="hidden"/>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Package Name</label>
+<input id="pkg-modal-name" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600" placeholder="e.g. Midnight Soirée" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Description</label>
+<textarea id="pkg-modal-description" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600 resize-none" placeholder="Short package summary shown on website..." rows="2"></textarea>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Highlights</label>
+<textarea id="pkg-modal-highlights" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600 resize-none" placeholder="One per line or comma-separated..." rows="3"></textarea>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Starting Price</label>
+<input id="pkg-modal-price" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600" placeholder="e.g. Starting from ₹799/plate" type="text"/>
+<label class="flex items-center gap-3 cursor-pointer mt-2">
+<input id="pkg-modal-show-price" type="checkbox" checked class="rounded bg-stone-800 border-stone-600 text-secondary focus:ring-secondary/40"/>
+<span class="text-xs text-stone-300">Show price on website</span>
+</label>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Best For</label>
+<input id="pkg-modal-bestfor" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600" placeholder="e.g. Weddings, corporate events" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Tag / Label</label>
+<select id="pkg-modal-badge" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all appearance-none cursor-pointer">
+<option>Most Popular</option>
+<option>Best Value</option>
+<option>Limited Edition</option>
+<option>None</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Display Order</label>
+<input id="pkg-modal-order" min="1" class="w-full bg-surface-container-highest border-none rounded-2xl py-3 px-5 text-sm focus:ring-1 focus:ring-secondary/40 transition-all placeholder:text-stone-600" placeholder="1" type="number"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-stone-500 font-bold ml-1">Visible on website</label>
+<label class="flex items-center gap-3 cursor-pointer mt-2">
+<input id="pkg-modal-visible" type="checkbox" checked class="rounded bg-stone-800 border-stone-600 text-secondary focus:ring-secondary/40"/>
+<span class="text-xs text-stone-300">Show on public packages page</span>
+</label>
+</div>
+<div class="pt-4 pb-1 flex gap-4 sticky bottom-0 bg-surface-container-high">
+<button id="cancel-package-modal" class="flex-1 px-6 py-3 border border-stone-700 text-stone-400 rounded-2xl font-bold hover:bg-stone-800 transition-colors" type="button">Discard</button>
+<button id="save-package-btn" class="flex-1 px-6 py-3 bg-secondary text-on-secondary rounded-2xl font-bold hover:opacity-90 transition-all shadow-lg shadow-secondary/10" type="submit">Create Package</button>
+</div>
+</form>
+</div>
+</div>
+
+<script>
+if (window.location.hash === '#add-package-modal') {
+  document.getElementById('add-package-modal').classList.remove('hidden');
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/admin-auth-guard.js"></script>
+<script src="../assets/js/admin-shell.js"></script>
+<script src="../assets/js/admin-app.js"></script>
+</body></html>

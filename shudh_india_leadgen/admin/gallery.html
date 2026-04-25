@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../assets/css/global.css" rel="stylesheet"/>
+<title>Gallery | Shudh India Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffb4a8",
+                        "inverse-primary": "#b52619",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-container": "#e34836",
+                        "on-secondary": "#3c2f00",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#342800",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-tertiary": "#3c2f00",
+                        "on-surface": "#e5e2e1",
+                        "primary-container": "#340000",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "on-primary": "#690000",
+                        "surface-dim": "#131313",
+                        "secondary": "#e9c349",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#514443",
+                        "outline": "#9e8d8c",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-surface-variant": "#d6c2c1",
+                        "on-primary-fixed": "#410000",
+                        "tertiary-fixed": "#ffe088",
+                        "tertiary": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "secondary-container": "#af8d11",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#241a00",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#ffdad4",
+                        "inverse-on-surface": "#313030",
+                        "surface": "#131313",
+                        "tertiary-container": "#cba72f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .asset-card:hover .delete-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="bg-stone-950 font-manrope tracking-tight h-screen w-64 fixed left-0 top-0 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold tracking-widest text-[#e9c349] uppercase">The Culinary Noir</h1>
+<p class="text-[10px] text-stone-500 mt-1 uppercase tracking-[0.2em]">Private Sommelier Mode</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="dashboard.html"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="packages.html"><span class="material-symbols-outlined mr-3">inventory_2</span>Packages</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="leads.html"><span class="material-symbols-outlined mr-3">contact_mail</span>Leads / Inquiries</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-[#e9c349] font-semibold border-r-4 border-[#e9c349] bg-stone-900/50 transition-colors duration-200" href="gallery.html"><span class="material-symbols-outlined mr-3">photo_library</span>Gallery</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="content.html"><span class="material-symbols-outlined mr-3">edit_document</span>Content Manager</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="settings.html"><span class="material-symbols-outlined mr-3">settings</span>Settings</a>
+</nav>
+<div class="mt-auto border-t border-stone-800/50 pt-6 px-4"></div>
+<div class="mt-4 px-4"><a href="../website/index.html" class="flex items-center gap-2 text-stone-600 hover:text-stone-400 text-xs tracking-wider py-2"><span class="material-symbols-outlined text-sm">arrow_back</span>View Website</a></div></aside>
+<!-- TopNavBar -->
+<header class="bg-stone-900/60 backdrop-blur-xl font-inter text-sm fixed top-0 right-0 w-[calc(100%-16rem)] h-16 flex items-center justify-between px-8 z-40 shadow-sm">
+<div class="flex items-center gap-4 bg-stone-800/30 px-4 py-2 rounded-full focus-within:ring-1 focus-within:ring-[#e9c349]/40 transition-all">
+<span class="material-symbols-outlined text-stone-400">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64 placeholder-stone-500" placeholder="Search assets..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-stone-400 hover:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="h-8 w-px bg-stone-800"></div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="text-right">
+<p class="text-xs font-semibold">Admin Dashboard</p>
+<p class="text-[10px] text-stone-500">Managing assets</p>
+</div>
+<img alt="Admin Avatar" class="w-8 h-8 rounded-full border border-stone-700" data-alt="professional portrait of a man in a dark suit with soft studio lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSDC2JirHSEg-so8UBqLd6LiuFRu6wuTOhcoXEEDzbXkPfC3FQ3H1adJfPjvQfbL3qe52BHsPvrWfA87Q1C2yMXNqa_KKar5U7nNq67MaDseGpGBKJaILhAuJum6iSATuEGnzj_OUZ5Hn8WnveEoY0sYZPmNRFN3dxx7MEfq794SWWiC7wLD8qmWeIQHvKW2bHU7yyEDsz3VFk-e2ZxAouz--ueT23QFPzj4r7A6pkn_2OtM1QtJ1tghgRpgWSlPsSAwAPr583-r6U"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-14 md:mt-16 p-3 sm:p-5 md:p-8 lg:p-10 min-h-[calc(100dvh-3.5rem)] md:min-h-[calc(100vh-4rem)] overflow-y-auto no-scrollbar max-w-full min-w-0 pb-[max(1rem,env(safe-area-inset-bottom))]">
+<!-- Editorial Header -->
+<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-8 md:mb-12">
+<div class="min-w-0">
+<span class="text-[10px] uppercase tracking-[0.3em] text-secondary font-bold mb-2 block">Asset Library</span>
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-on-surface tracking-tight">Gallery Management</h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto sm:shrink-0">
+<button type="button" class="bg-surface-container-high text-on-surface px-5 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors border border-outline-variant/15 w-full sm:w-auto">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span class="text-sm font-semibold">Filter</span>
+</button>
+<button type="button" class="bg-gradient-to-br from-primary to-inverse-primary text-on-primary px-6 sm:px-8 py-3 rounded-xl flex items-center justify-center gap-2 font-bold shadow-lg shadow-primary/10 hover:opacity-90 transition-opacity w-full sm:w-auto">
+<span class="material-symbols-outlined">upload</span>
+<span>Upload Image</span>
+</button>
+</div>
+</div>
+<section class="mb-8 md:mb-10 p-4 sm:p-6 rounded-2xl bg-surface-container-high border border-stone-800/50">
+<h3 class="text-lg font-bold mb-1 text-secondary">Live website media</h3>
+<p class="text-xs text-stone-500 mb-4">Adds to Firestore <span class="text-stone-400">media</span> — shown on public gallery and videos pages.</p>
+<p class="lg:hidden text-[11px] text-stone-500 mb-4 -mt-2">On phone, add and remove items in the grid above. The large layout preview appears on wider screens.</p>
+<form id="media-add-form" class="flex flex-col lg:flex-row flex-wrap gap-3 lg:items-end">
+<div class="flex-1 min-w-[220px]">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Image or video URL</label>
+<input id="media-url" type="url" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm" placeholder="https://… or YouTube link"/>
+</div>
+<div class="w-full sm:w-40">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Type</label>
+<select id="media-type" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm">
+<option value="photo">Photo</option>
+<option value="video">Video</option>
+</select>
+</div>
+<div class="w-full sm:w-48">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Category</label>
+<select id="media-category" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm">
+<option value="weddings">Weddings</option>
+<option value="corporate">Corporate</option>
+<option value="private-parties">Private Parties</option>
+<option value="behind-the-scenes">Behind the Scenes</option>
+<option value="masterclasses">Masterclasses</option>
+</select>
+</div>
+<div class="flex-1 min-w-[160px]">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Title (optional)</label>
+<input id="media-title" type="text" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm"/>
+</div>
+<div class="flex-1 min-w-[220px]">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Preview/Cover image URL (for videos)</label>
+<input id="media-poster-url" type="url" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm" placeholder="https://...jpg or png"/>
+</div>
+<div class="w-full sm:w-44">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Layout</label>
+<select id="media-layout" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm">
+<option value="standard">Standard</option>
+<option value="feature">Feature</option>
+<option value="wide">Wide</option>
+<option value="tall">Tall</option>
+</select>
+</div>
+<div class="w-full sm:w-32">
+<label class="text-[10px] uppercase text-stone-500 font-bold block mb-1">Display order</label>
+<input id="media-order" type="number" min="0" step="1" class="w-full bg-stone-900 border-none rounded-xl px-4 py-2.5 text-sm" placeholder="0"/>
+</div>
+<button type="submit" class="px-6 py-2.5 rounded-xl bg-secondary text-on-secondary font-bold text-sm w-full lg:w-auto">Add to site</button>
+</form>
+<p class="text-[11px] text-stone-500 mt-3">Images and videos are separated below. Drag within each section to set order.</p>
+<div class="mt-6 space-y-6">
+<div class="rounded-xl border border-stone-800/60 p-4 bg-surface-container-low">
+<h4 class="text-sm font-semibold text-secondary mb-3">Image Library</h4>
+<div id="media-admin-photo-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 w-full min-w-0"></div>
+</div>
+<div class="rounded-xl border border-stone-800/60 p-4 bg-surface-container-low">
+<h4 class="text-sm font-semibold text-secondary mb-3">Video Library</h4>
+<div id="media-admin-video-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 w-full min-w-0"></div>
+</div>
+</div>
+</section>
+<section class="pb-8">
+<div class="rounded-2xl border border-stone-800/50 bg-surface-container p-4 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-on-surface mb-2">Dynamic media only</h3>
+<p class="text-xs sm:text-sm text-stone-500 leading-relaxed">
+All website photos and videos now load from Firestore media records above.
+Use URL + Type + Layout + Display order to control how each item appears on the public Gallery and Videos pages.
+</p>
+</div>
+</section>
+</main>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/admin-auth-guard.js"></script>
+<script src="../assets/js/admin-shell.js"></script>
+<script src="../assets/js/admin-app.js"></script>
+</body></html>

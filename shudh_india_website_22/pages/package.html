@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Packages | Shudh India</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","secondary-container":"#e8f5e9","on-secondary-container":"#1b5e20","tertiary":"#735c00","tertiary-container":"#cca730","on-tertiary-container":"#4f3e00","surface":"#FCF8F1","on-surface":"#1b1c15","surface-variant":"#e4e3d7","on-surface-variant":"#5b403d","surface-container":"#efeee3","surface-container-low":"#FDF2EE","surface-container-high":"#F0F4ED","surface-container-highest":"#e4e3d7","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","outline":"#8f6f6c","background":"#FCF8F1"}}}}</script>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">restaurant_menu</span>Shudh India</a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a><a href="gallery.html">Gallery</a><a href="package.html" class="active">Packages</a>
+      <a href="videos.html">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+    </nav>
+    <a href="getquote.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="gallery.html">Gallery</a><a href="package.html" class="active">Packages</a>
+  <a href="videos.html">Videos</a><a href="aboutus.html">About</a><a href="carrer.html">Careers</a>
+  <a href="getquote.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Our Curated Packages</span>
+  <h1 class="page-hero__title">Choose Your Culinary <span class="accent">Feast</span></h1>
+  <p class="page-hero__subtitle">Thoughtfully designed packages for every occasion and guest count</p>
+</div>
+
+<!-- PACKAGES -->
+<section class="section">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start">
+      <!-- Silver -->
+      <div class="pkg-card">
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-on-surface-variant);margin-bottom:1rem;display:block">Silver Selection</span>
+        <h3 style="font-family:var(--font-headline);font-weight:800;font-size:1.75rem;margin-bottom:.5rem">Essential Gourmet</h3>
+        <p style="color:var(--color-on-surface-variant);margin-bottom:2rem;font-size:.9375rem">Perfect for intimate gatherings of up to 50 guests.</p>
+        <ul style="display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;flex:1">
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary)">check_circle</span> 3 Starters, 5 Main Courses</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary)">check_circle</span> 2 Signature Desserts</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary)">check_circle</span> Professional Service Staff</li>
+        </ul>
+        <a href="getquote.html" class="btn btn-outline" style="width:100%;justify-content:center">Get Quote</a>
+      </div>
+      <!-- Gold (popular) -->
+      <div class="pkg-card pkg-card--featured">
+        <div class="pkg-badge">Most Popular</div>
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-primary);margin-bottom:1rem;display:block">Gold Standard</span>
+        <h3 style="font-family:var(--font-headline);font-weight:800;font-size:1.75rem;margin-bottom:.5rem;color:var(--color-primary)">Royal Maharaja</h3>
+        <p style="color:var(--color-on-surface-variant);margin-bottom:2rem;font-size:.9375rem">Our signature experience for weddings (100–500 guests).</p>
+        <ul style="display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;flex:1">
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary);font-variation-settings:'FILL' 1">check_circle</span> 6 Starters, 10 Main Courses</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary);font-variation-settings:'FILL' 1">check_circle</span> Live Counter Stations</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary);font-variation-settings:'FILL' 1">check_circle</span> 4 Exotic Desserts</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-secondary);font-variation-settings:'FILL' 1">check_circle</span> Floral Food Display Art</li>
+        </ul>
+        <a href="getquote.html" class="btn btn-primary" style="width:100%;justify-content:center">Get Quote</a>
+      </div>
+      <!-- Diamond -->
+      <div class="pkg-card">
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-tertiary);margin-bottom:1rem;display:block">Diamond Elite</span>
+        <h3 style="font-family:var(--font-headline);font-weight:800;font-size:1.75rem;margin-bottom:.5rem">Artisanal Grandeur</h3>
+        <p style="color:var(--color-on-surface-variant);margin-bottom:2rem;font-size:.9375rem">For mega-events and high-profile celebrations.</p>
+        <ul style="display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;flex:1">
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-tertiary)">stars</span> Unlimited Live Stations</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-tertiary)">stars</span> Molecular Gastronomy Corner</li>
+          <li style="display:flex;align-items:center;gap:.75rem"><span class="material-symbols-outlined" style="color:var(--color-tertiary)">stars</span> International Chef Collaboration</li>
+        </ul>
+        <a href="getquote.html" class="btn btn-outline" style="width:100%;justify-content:center">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD ONS -->
+<section class="section" style="background:var(--color-surface-container-high)">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-eyebrow">Enhance Your Package</div>
+      <h2 class="section-title" style="text-align:center">Popular <span class="accent">Add-ons</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+      <div class="card" style="padding:1.75rem;display:flex;align-items:center;gap:1rem">
+        <span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-primary)">local_bar</span>
+        <div><h4 style="font-family:var(--font-headline);font-weight:700;font-size:1rem">Mocktail Bar</h4><p style="color:var(--color-on-surface-variant);font-size:.875rem">Live crafted drinks</p></div>
+      </div>
+      <div class="card" style="padding:1.75rem;display:flex;align-items:center;gap:1rem">
+        <span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-secondary)">cake</span>
+        <div><h4 style="font-family:var(--font-headline);font-weight:700;font-size:1rem">Custom Cake Station</h4><p style="color:var(--color-on-surface-variant);font-size:.875rem">Personalized designs</p></div>
+      </div>
+      <div class="card" style="padding:1.75rem;display:flex;align-items:center;gap:1rem">
+        <span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-tertiary)">spa</span>
+        <div><h4 style="font-family:var(--font-headline);font-weight:700;font-size:1rem">Floral Décor</h4><p style="color:var(--color-on-surface-variant);font-size:.875rem">Botanical centrepieces</p></div>
+      </div>
+      <div class="card" style="padding:1.75rem;display:flex;align-items:center;gap:1rem">
+        <span class="material-symbols-outlined" style="font-size:2rem;color:var(--color-primary)">photo_camera</span>
+        <div><h4 style="font-family:var(--font-headline);font-weight:700;font-size:1rem">Food Photography</h4><p style="color:var(--color-on-surface-variant);font-size:.875rem">Professional shots</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Create Your Perfect Menu?</h2>
+  <p>Get in touch for a personalised consultation and a custom quote tailored to your event.</p>
+  <a href="getquote.html" class="btn" style="background:#fff;color:var(--color-primary);padding:.9rem 2.5rem;font-size:1rem;margin:0 auto">Get My Custom Quote</a>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div><div class="footer-brand__logo">Shudh India</div><p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades.</p><div class="footer-socials"><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a><a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="package.html">Packages</a></li><li><a href="videos.html">Videos</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="carrer.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div style="display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem"><p style="font-size:.875rem;color:#71717a">+91 98765 43210</p><p style="font-size:.875rem;color:#71717a">concierge@shudhindia.com</p></div></div>
+  </div>
+  <div class="site-footer__bottom"><p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p><div style="display:flex;gap:1.5rem"><a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a><a href="#" style="color:#71717a;font-size:.8125rem">Terms</a></div></div>
+</footer>
+<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));</script>
+</body></html>

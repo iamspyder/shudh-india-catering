@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Shudh India</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","on-secondary":"#ffffff","secondary-container":"#e8f5e9","on-secondary-container":"#1b5e20","tertiary":"#735c00","tertiary-container":"#cca730","surface":"#FCF8F1","on-surface":"#1b1c15","surface-variant":"#e4e3d7","on-surface-variant":"#5b403d","surface-container":"#efeee3","surface-container-low":"#FDF2EE","surface-container-high":"#F0F4ED","surface-container-highest":"#e4e3d7","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","outline":"#8f6f6c","background":"#FCF8F1"}}}}</script>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+
+<!-- SHARED HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">restaurant_menu</span>Shudh India
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="package.html">Packages</a>
+      <a href="videos.html">Videos</a>
+      <a href="aboutus.html" class="active">About</a>
+      <a href="carrer.html">Careers</a>
+    </nav>
+    <a href="getquote.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Home</a><a href="gallery.html">Gallery</a><a href="package.html">Packages</a>
+  <a href="videos.html">Videos</a><a href="aboutus.html" class="active">About</a><a href="carrer.html">Careers</a>
+  <a href="getquote.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="page-hero__eyebrow">Our Story</span>
+  <h1 class="page-hero__title">About <span class="accent">Us</span></h1>
+  <p class="page-hero__subtitle">Crafting memorable culinary experiences for over two decades</p>
+</div>
+
+<!-- BRAND STORY -->
+<section class="section" style="background:var(--color-surface-container-low)">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center" class="lg:grid-cols-2">
+      <div style="position:relative">
+        <div style="aspect-ratio:4/5;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-elevated)">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnNPxd-ADUYUtlJDqko9HqJKTpJsXpxX3xIgWDDAlNp1cmUmvMtCbBkHkT2-ENRq4Wu6eyQTm-wtAchA3fhUEYoqoAPRgWkXEpcohiMo2xoL50iDSMsAxVJCg0Lgi8TNe_-iqbONEDfWCCv_ezejdia--xxgTh0X_T75vmGin1kjzAVqAV2akwrNkQxW4RtYKLlEcubhkp6_8p5uHicaGSQy-EJfDplXsKMz8sojcL7kNkmjV8OG-Rrk7Ol-u7xguw8NKttVIoKTJ" alt="Premium catering" style="width:100%;height:100%;object-fit:cover;transition:transform .7s" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"/>
+        </div>
+        <div style="position:absolute;bottom:-2rem;right:-2rem;background:#fff;padding:1.5rem 2rem;border-radius:1rem;box-shadow:var(--shadow-elevated);display:none" class="md:block">
+          <span class="font-moment" style="font-size:2rem;color:var(--color-tertiary)">A Legacy of Taste</span>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,3rem);line-height:1.2;margin-bottom:1.5rem">
+          Two Decades of<br/>
+          <span class="font-moment" style="color:var(--color-primary);font-size:1.3em;display:block;margin-top:.25rem">Artisanal Mastery</span>
+        </h2>
+        <p style="font-size:1.0625rem;color:var(--color-on-surface-variant);line-height:1.75;margin-bottom:1.5rem">
+          With over <strong style="color:var(--color-primary)">20 years of excellence</strong>, we have mastered the art of catering for the most discerning palates. Our journey is defined by an unwavering commitment to quality and a passion for creating sensory experiences that linger in memory long after the last bite.
+        </p>
+        <hr style="border:none;border-top:1px solid var(--color-outline-variant);margin:1.5rem 0"/>
+        <p style="font-style:italic;color:var(--color-on-surface-variant);font-size:1rem">"Every event is a unique canvas, and flavor is our medium."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST NUMBERS -->
+<section class="section">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem">
+      <div class="card" style="padding:3rem;text-align:center">
+        <span style="font-family:var(--font-headline);font-weight:800;font-size:3rem;color:var(--color-primary);display:block;margin-bottom:.5rem">20+</span>
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-tertiary)">Years of Excellence</span>
+      </div>
+      <div class="card" style="padding:3rem;text-align:center">
+        <span style="font-family:var(--font-headline);font-weight:800;font-size:3rem;color:var(--color-secondary);display:block;margin-bottom:.5rem">1000+</span>
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-tertiary)">Events Delivered</span>
+      </div>
+      <div class="card" style="padding:3rem;text-align:center">
+        <span style="font-family:var(--font-headline);font-weight:800;font-size:3rem;color:var(--color-tertiary);display:block;margin-bottom:.5rem">98%</span>
+        <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--color-tertiary)">Happy Clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section" style="background:var(--color-surface-container)">
+  <div class="section-inner">
+    <h2 style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,2.75rem);text-align:center;margin-bottom:3.5rem">The Shudh Distinction</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem">
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;border-radius:9999px;background:rgba(175,16,26,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-primary)">
+          <span class="material-symbols-outlined" style="font-size:2rem">restaurant_menu</span>
+        </div>
+        <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.125rem;margin-bottom:.5rem">Premium Quality</h3>
+        <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Sourcing only the finest organic ingredients from local artisans.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;border-radius:9999px;background:rgba(46,125,50,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-secondary)">
+          <span class="material-symbols-outlined" style="font-size:2rem">auto_awesome</span>
+        </div>
+        <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.125rem;margin-bottom:.5rem">Custom Experiences</h3>
+        <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Tailored menus designed to reflect your unique personal story.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;border-radius:9999px;background:rgba(115,92,0,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-tertiary)">
+          <span class="material-symbols-outlined" style="font-size:2rem">groups</span>
+        </div>
+        <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.125rem;margin-bottom:.5rem">Professional Team</h3>
+        <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Highly trained staff dedicated to hospitality excellence.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;border-radius:9999px;background:rgba(27,28,21,.06);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-on-surface)">
+          <span class="material-symbols-outlined" style="font-size:2rem">task_alt</span>
+        </div>
+        <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.125rem;margin-bottom:.5rem">Seamless Execution</h3>
+        <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Stress-free logistics from concept to final cleanup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Let's plan your next event</h2>
+  <p>Our culinary architects are ready to design your perfect menu for any occasion.</p>
+  <a href="getquote.html" class="btn" style="background:#fff;color:var(--color-primary);padding:.9rem 2.5rem;font-size:1rem;margin:0 auto">Get Quote</a>
+</section>
+
+<!-- SHARED FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="footer-brand__logo">Shudh India</div>
+      <p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades.</p>
+      <div class="footer-socials">
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">thumb_up</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="package.html">Packages</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="carrer.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Signature</h4>
+      <div class="footer-tags">
+        <span class="footer-tag">Aromatic Spices</span><span class="footer-tag">Farm Fresh</span>
+        <span class="footer-tag">Artisanal Plating</span><span class="footer-tag">Vegan Friendly</span>
+      </div>
+      <p class="footer-cert">View Hygiene Certification</p>
+      <div style="margin-top:1.25rem">
+        <p style="font-size:.875rem;color:#71717a;margin-bottom:.4rem"><strong style="color:var(--color-on-surface)">Call:</strong> +91 98765 43210</p>
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Email:</strong> concierge@shudhindia.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p>
+    <div style="display:flex;gap:1.5rem">
+      <a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">Terms</a>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+</script>
+</body>
+</html>

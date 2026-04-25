@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb4a8",
+                    "inverse-primary": "#b52619",
+                    "secondary-fixed": "#ffe088",
+                    "on-primary-container": "#e34836",
+                    "on-secondary": "#3c2f00",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#342800",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary-fixed-variant": "#920703",
+                    "on-tertiary": "#3c2f00",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#340000",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-variant": "#353534",
+                    "on-primary": "#690000",
+                    "surface-dim": "#131313",
+                    "secondary": "#e9c349",
+                    "surface-bright": "#393939",
+                    "surface-container-low": "#1c1b1b",
+                    "outline-variant": "#514443",
+                    "outline": "#9e8d8c",
+                    "surface-tint": "#ffb4a8",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#4e3d00",
+                    "on-surface-variant": "#d6c2c1",
+                    "on-primary-fixed": "#410000",
+                    "tertiary-fixed": "#ffe088",
+                    "tertiary": "#e9c349",
+                    "surface-container-highest": "#353534",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "secondary-container": "#af8d11",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#241a00",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "primary-fixed": "#ffdad4",
+                    "inverse-on-surface": "#313030",
+                    "surface": "#131313",
+                    "tertiary-container": "#cba72f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-stone-950 font-manrope tracking-tight h-screen w-64 fixed left-0 top-0 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-12 px-4">
+<h1 class="text-xl font-bold tracking-widest text-[#e9c349] uppercase">The Culinary Noir</h1>
+<p class="text-[10px] text-stone-500 tracking-[0.2em] mt-1">Private Sommelier Mode</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="dashboard.html"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="packages.html"><span class="material-symbols-outlined mr-3">inventory_2</span>Packages</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="leads.html"><span class="material-symbols-outlined mr-3">contact_mail</span>Leads / Inquiries</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="gallery.html"><span class="material-symbols-outlined mr-3">photo_library</span>Gallery</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-[#e9c349] font-semibold border-r-4 border-[#e9c349] bg-stone-900/50 transition-colors duration-200" href="settings.html"><span class="material-symbols-outlined mr-3">settings</span>Settings</a>
+</nav>
+<div class="mt-auto px-4 pt-4 flex items-center gap-3 bg-stone-900/40 p-4 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="close up headshot of an executive chef in a black uniform with a confident expression in a dimly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3IA-Lyx_qslmKfDH33XJKEF3ErOvE-WjR2H7JVNP47RjMpl9pWYltewuTQNb9UdPfp5keEW-NiV31yLIRsEuPwtmvbrAxIVCE2wOQcFKeKrifNEUhwfLsiaKgu6EJUDVApoUmqnfLIOvMvyOg2IXEFkBz63l4TvY0GyxHjCzPBcshR9J1qL0q760lFwZGfyrEEz05lgNiCxLobiiyRGrQa6nfWE4AlMpzETNUFHtW4r5mGn_fgSjhYN1hV2RwjWqckQ1C3wDyTB3"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-on-surface truncate">Admin Profile</p>
+<p class="text-[10px] text-stone-500 truncate">Catering Director</p>
+</div>
+</div>
+<div class="mt-4 px-4"><a href="../website/index.html" class="flex items-center gap-2 text-stone-600 hover:text-stone-400 text-xs tracking-wider py-2"><span class="material-symbols-outlined text-sm">arrow_back</span>View Website</a></div></aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-stone-900/60 backdrop-blur-xl flex items-center justify-between px-8 z-40 shadow-sm font-inter text-sm">
+<div class="flex items-center gap-4 bg-stone-800/30 px-4 py-2 rounded-full focus-within:ring-1 focus-within:ring-[#e9c349]/40 transition-all w-96">
+<span class="material-symbols-outlined text-stone-400">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full text-stone-200" placeholder="Search applications or settings..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-stone-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-on-primary-container rounded-full"></span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs font-medium text-stone-300">Admin Dashboard</span>
+<img class="w-8 h-8 rounded-full" data-alt="Admin Avatar profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCK8zwQ6sNXSCEVoiTxgwhmO5cCYGq-wF4IsrvBuJ_Bmb2K8tv5qCsFjFFGuSsGAyrnBFBVhcx3neN9nDk_7wCK_EPdLlH7CaTRc9fwxYJPbyRwi5MfYKL55s9P9Lqk-4X6XJ52Daiob4kHN4rFoHfCag2uuMnlcElhwICKCCGCf9ovNo2shdtzw6lZ_NSAwab8THLLhpC_e7eHhJw5MdbwbggYCpzTMkHNp4BASB44VUvCBAy8jMGKmUaqSSvrI055oE7F-3Z3-m8"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-16 h-screen overflow-y-auto bg-surface-container-low no-scrollbar">
+<div class="p-10 space-y-12 max-w-7xl mx-auto">
+<!-- Page Header -->
+<section>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface mb-2">Management &amp; Configuration</h2>
+<p class="text-stone-400 max-w-2xl">Refine your team and digital presence with the same precision you apply to your culinary creations.</p>
+</section>
+<!-- Careers Section: Applicant Grid -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Talent Pipeline</span>
+<h3 class="font-headline text-2xl font-bold mt-1">Recent Careers Applicants</h3>
+</div>
+<button class="text-secondary text-sm font-semibold hover:opacity-80 transition-opacity flex items-center gap-2">
+                        View Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Applicant Card 1 -->
+<div class="group bg-surface-container-high p-6 rounded-xl hover:bg-stone-800/40 transition-all duration-300 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="portrait of a professional female candidate in her 30s with a warm and approachable smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLdkBnKzv2NITkgfg6CYBHtGkVR3eQqZyu-vguzM5CupBjP8_Z4S5KU6uDV0vEf9N9AYjHKUlaZ57RNVMYk_5QGySXrB-RAPZ8t10NmStL_uX5Hi3o33OOgAiW_538h6s1AX14g2soa7zDArKGekNFIkJZasYb3Cq1LBxgSeCX_uPQBiV0acoMjZI_xiNios6Xu_uJVcjHrDvAaAFc2chNj8f2d6csskXTQ3OX-d9Jfpowz9BbUWK7iblHaXkBJNB84xajV-AZslIn"/>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rossi</h4>
+<p class="text-xs text-stone-500">Sommelier Candidate</p>
+</div>
+</div>
+<span class="text-[10px] px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md font-bold tracking-wider">NEW</span>
+</div>
+<p class="text-sm text-stone-400 mb-6 line-clamp-2 italic">"Passionate about rare vintages and creating unforgettable pairing experiences for high-end events."</p>
+<div class="flex items-center justify-between gap-4">
+<button class="flex-1 text-xs py-3 rounded-lg bg-surface-container-highest text-on-surface font-semibold hover:bg-stone-700 transition-colors">View Resume</button>
+<div class="flex items-center bg-stone-900 rounded-lg p-1">
+<button class="w-8 h-8 rounded-md flex items-center justify-center bg-secondary text-on-secondary shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</button>
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-stone-500 hover:text-red-400">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Applicant Card 2 -->
+<div class="group bg-surface-container-high p-6 rounded-xl hover:bg-stone-800/40 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="portrait of a male chef with a focused expression and light beard wearing a white apron" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHvfLCfGXj9RULbmO1rqemIUkNzCWa_MM5mrko6Ur-nDYuw9lblSM9xQUMsEWAUIp0HaVZs6Orf26RwsBb0jZfxMULc6f6dVrItZBD8ul_zW3LOXLDkGjRwF9Vp6EM6ma8CCLXBpC9aUVJxH4sWorI0EjiB6zZSlv-hc4ItwSKu02fGnqsoARbCRbuuaJfK078jpMG1BJbXMLxVfoQh55CYVFn2KT6SNz_-neKH4yVsg5YJnz3CfSlffxe-Tfk90Q5ldwEDVdP1Ham"/>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Thorne</h4>
+<p class="text-xs text-stone-500">Executive Sous Chef</p>
+</div>
+</div>
+<span class="text-[10px] px-2 py-1 bg-orange-500/10 text-orange-400 rounded-md font-bold tracking-wider uppercase">Contacted</span>
+</div>
+<p class="text-sm text-stone-400 mb-6 line-clamp-2 italic">"12 years experience in Michelin-star kitchens, specialized in molecular gastronomy and private banquet scaling."</p>
+<div class="flex items-center justify-between gap-4">
+<button class="flex-1 text-xs py-3 rounded-lg bg-surface-container-highest text-on-surface font-semibold hover:bg-stone-700 transition-colors">View Resume</button>
+<div class="flex items-center bg-stone-900 rounded-lg p-1">
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-stone-500 hover:text-secondary">
+<span class="material-symbols-outlined text-sm">check</span>
+</button>
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-stone-500 hover:text-red-400">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Applicant Card 3 -->
+<div class="group bg-surface-container-high p-6 rounded-xl hover:bg-stone-800/40 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional portrait of a woman with curly hair and glasses in a creative office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3-xBgaMdKXhcTIGX3uER_mEtiCRafeddP8gHplc4VCmUD9M8F_28KWcJelqShSeh4kMZ74HGVMS5hybrRKpaG6EtnNc2ADQT5DRw4QSvROvnBUyj4xnZpkQfTd84_lWNlZessKCgYx0w2AjYnVv8Wzum906xG3VMnFpJVvYeqsa3rP6cf5Dfh442e0MWb__pG58Qq0dYyze0lKRXKyhYgxiRCjJWcuu6GN8cUqG42P6T0HXnQQjlUjE5FkFgZTt9ww-q_3deVkKHR"/>
+<div>
+<h4 class="font-bold text-on-surface">Sienna Vance</h4>
+<p class="text-xs text-stone-500">Event Coordinator</p>
+</div>
+</div>
+<span class="text-[10px] px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-md font-bold tracking-wider uppercase">Converted</span>
+</div>
+<p class="text-sm text-stone-400 mb-6 line-clamp-2 italic">"Expertise in logistics for high-profile weddings and corporate gala events with 500+ attendees."</p>
+<div class="flex items-center justify-between gap-4">
+<button class="flex-1 text-xs py-3 rounded-lg bg-surface-container-highest text-on-surface font-semibold hover:bg-stone-700 transition-colors">View Resume</button>
+<div class="flex items-center bg-stone-900 rounded-lg p-1">
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-stone-500 hover:text-secondary">
+<span class="material-symbols-outlined text-sm">check</span>
+</button>
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-stone-500 hover:text-red-400">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings Section: Two-Column Bento Layout -->
+<section class="space-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Configuration</span>
+<h3 class="font-headline text-2xl font-bold mt-1">Platform Settings</h3>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Website Content Column -->
+<div class="col-span-12 lg:col-span-7 space-y-6">
+<div class="bg-surface-container-high rounded-2xl p-8 space-y-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary">web</span>
+<h4 class="text-lg font-bold">Website Content &amp; Banners</h4>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Hero Section Headline</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm text-on-surface focus:ring-1 focus:ring-secondary/40 transition-all" type="text" value="Elevating Private Events into Culinary Masterpieces"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Main Banner Image</label>
+<div class="relative h-48 rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="cinematic wide shot of an elegant dinner table set with crystal glasses and candles in a historic ballroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfOKdrEo5BlLtDNjcF1WCchOxSZ2dEy_2lBCalYN1CZXDpTCGYmPmGM29eYaInldkEyaWz3JNnm6VXLe6wRWaR9xr4SJFneXHI6sEdhxDAg4_L0ramVGjPptDoU-sBdLWX303FtOn9pxCmoYaTfKpZvtXDxf625N6gOfR2g0ThHIZEK0Cnizjgres0_ZtPS4pbUt0OHqBGMVVcKimf2_8abgjpothVjbfnHc_o9vKYyFDwjPoZ0QX4kD9Po_bZfH2NCMn8Do0WOP1G"/>
+<div class="absolute inset-0 bg-stone-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full text-xs font-bold hover:bg-white/20 transition-colors">Change Asset</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Primary CTA Text</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm text-on-surface" type="text" value="Book Experience"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Secondary CTA Text</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm text-on-surface" type="text" value="View Menu"/>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-[#ffb4a8] to-[#b52619] text-on-primary font-bold shadow-xl hover:shadow-primary/20 transition-all">Publish Changes</button>
+</div>
+</div>
+</div>
+<!-- Admin Profile Column -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="bg-stone-900/60 rounded-2xl p-8 space-y-8 border-l border-white/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary">manage_accounts</span>
+<h4 class="text-lg font-bold">Admin Profile Settings</h4>
+</div>
+<div class="flex flex-col items-center py-6">
+<div class="relative group cursor-pointer">
+<img class="w-24 h-24 rounded-full object-cover border-2 border-secondary/20" data-alt="profile image of catering admin director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC13PGa5hK7Fk39s_lZra3OI6bBW35rpqkpuYBWaEW51mDHm_dcaXxF06ScD2UFyZUor35dBDWKluodSZ4akf1nOs88JIUhGm1iOQDOsXAk0RAePJu71mXTPv7MQH7bD4Yx9KhkvU8xci8GQbuqgTZJD5nyVZCPcc-p28XMfpWu7KCD_T_x8a5QC7daafOf0OoojXjNahODD1-cMRjjjDF6sGNIWjvtQcZpTXnqwRFnEbzFZSNW6Q3zTS65c-InGs9WOy09UzK9uaMd"/>
+<div class="absolute inset-0 bg-stone-950/60 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">photo_camera</span>
+</div>
+</div>
+<h5 class="mt-4 font-bold">Julian St. James</h5>
+<p class="text-xs text-stone-500 uppercase tracking-tighter">Catering Director</p>
+</div>
+<div class="space-y-5">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase text-stone-500">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm" type="email" value="stjames@culinarynoir.com"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase text-stone-500">Phone</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm" type="text" value="+1 (555) 092-4431"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase text-stone-500">Access Level</label>
+<div class="w-full bg-stone-800/40 rounded-xl px-4 py-3 text-sm flex items-center justify-between text-secondary">
+<span>Master Administrator</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center gap-4">
+<button class="flex-1 py-3 rounded-xl border border-stone-700 text-xs font-bold hover:bg-stone-800 transition-colors">Change Password</button>
+<button class="flex-1 py-3 rounded-xl bg-surface-container-highest text-xs font-bold hover:bg-stone-700 transition-colors">Save Profile</button>
+</div>
+</div>
+<!-- System Notifications Mini-Card -->
+<div class="bg-surface-container-high rounded-2xl p-6 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<h6 class="text-sm font-bold">System Alerts</h6>
+<p class="text-[10px] text-stone-500">Enabled via Mobile Push</p>
+</div>
+</div>
+<div class="w-10 h-5 bg-secondary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

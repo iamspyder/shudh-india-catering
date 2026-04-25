@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../assets/css/global.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffb4a8",
+                        "inverse-primary": "#b52619",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-container": "#e34836",
+                        "on-secondary": "#3c2f00",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#342800",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-tertiary": "#3c2f00",
+                        "on-surface": "#e5e2e1",
+                        "primary-container": "#340000",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "on-primary": "#690000",
+                        "surface-dim": "#131313",
+                        "secondary": "#e9c349",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#514443",
+                        "outline": "#9e8d8c",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-surface-variant": "#d6c2c1",
+                        "on-primary-fixed": "#410000",
+                        "tertiary-fixed": "#ffe088",
+                        "tertiary": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "secondary-container": "#af8d11",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#241a00",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#ffdad4",
+                        "inverse-on-surface": "#313030",
+                        "surface": "#131313",
+                        "tertiary-container": "#cba72f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #eceae4;
+            font-family: 'Inter', sans-serif;
+        }
+        .editorial-title {
+            font-family: 'Manrope', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="shudh-admin-body min-h-screen bg-surface-container-low">
+<!-- SideNavBar -->
+<aside class="bg-stone-950 flex flex-col h-screen w-64 fixed left-0 top-0 py-8 px-4 font-manrope tracking-tight z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold tracking-widest text-[#e9c349] uppercase">The Culinary Noir</h1>
+<p class="text-[10px] text-stone-500 tracking-[0.2em] mt-1">Private Sommelier Mode</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 rounded-lg text-[#e9c349] font-semibold border-r-4 border-[#e9c349] bg-stone-900/50 transition-colors duration-200" href="dashboard.html"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="packages.html"><span class="material-symbols-outlined mr-3">inventory_2</span>Packages</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="leads.html"><span class="material-symbols-outlined mr-3">contact_mail</span>Leads / Inquiries</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="gallery.html"><span class="material-symbols-outlined mr-3">photo_library</span>Gallery</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="content.html"><span class="material-symbols-outlined mr-3">edit_document</span>Content Manager</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="settings.html"><span class="material-symbols-outlined mr-3">settings</span>Settings</a>
+</nav>
+<div class="mt-auto px-4 pt-4 flex items-center gap-3">
+<img alt="Catering Admin Profile" class="w-8 h-8 rounded-full bg-stone-800" data-alt="Professional headshot of a catering executive in a dark suit with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIT3sHaUzIEeU2eQQwSUs19cwTlOW0gOkUGwJBMR7ubsxtxxUx2vZF9luKe9msWIBjlf7i2p0IFgoUG6CFTEF5sZdwzOqEqKiSRymveyu16W4-7t0NapW8WE4P-ncH7ZcPFdmhvr8ApZctFz6R1jxfKyCsV0HVCGvqPI9biHWsMv_uEtiGQwejLzF51xwJ0A3-UsSf4nMMPgZW5hG-n0hpkwiu5t-yASQ_ohjcwJ6i3sPo8JBN9c6ZvW3hwISsEgAptlpi5teMWuR"/>
+<div class="overflow-hidden">
+<p class="text-xs font-semibold text-stone-200 truncate">Shudh India Admin</p>
+<p class="text-[10px] text-stone-500 truncate">Global Director</p>
+</div>
+</div>
+<div class="mt-4 px-4"><a href="../website/index.html" class="flex items-center gap-2 text-stone-600 hover:text-stone-400 text-xs tracking-wider py-2"><span class="material-symbols-outlined text-sm">arrow_back</span>View Website</a></div></aside>
+<!-- TopNavBar (replaced by admin-shell.js; placeholder matches other admin pages) -->
+<header class="bg-stone-900/60 backdrop-blur-xl fixed top-0 right-0 w-[calc(100%-16rem)] h-16 flex items-center justify-between px-8 z-40 shadow-sm font-inter text-sm">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-500 text-lg">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-[#e9c349]/40 placeholder:text-stone-600" placeholder="Search inquiries..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 shrink-0">
+<button type="button" class="text-stone-400 hover:text-white transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-on-primary-container rounded-full border-2 border-stone-900"></span>
+</button>
+<div class="hidden sm:block h-8 w-px bg-stone-800"></div>
+<div class="flex items-center gap-3 border-stone-800 sm:border-l sm:pl-6">
+<span class="text-stone-300 font-medium hidden sm:inline">Admin Dashboard</span>
+<span class="material-symbols-outlined text-stone-400" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas (single ml-64 from admin-shell: ml-0 md:ml-64 — do not wrap in ml-64 container) -->
+<main class="ml-64 mt-14 md:mt-16 px-3 sm:px-4 md:px-6 lg:px-10 py-5 sm:py-8 bg-surface-container-low min-w-0 max-w-full min-h-[calc(100dvh-3.5rem)] md:min-h-[calc(100vh-4rem)] overflow-x-hidden box-border pb-[max(1.5rem,env(safe-area-inset-bottom))]">
+<!-- Hero Header Section -->
+<div class="mb-8 md:mb-12 flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-end">
+<div class="min-w-0">
+<h2 class="editorial-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface tracking-tight mb-2">Performance Overview</h2>
+<p class="text-stone-500 max-w-md text-sm sm:text-base">Real-time catering metrics and inquiry management for Shudh India operations.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+<button type="button" onclick="window.location.href='leads.html'" class="bg-stone-800 hover:bg-stone-700 text-secondary font-medium px-5 sm:px-6 py-3 rounded-xl transition-all flex items-center justify-center gap-2 w-full sm:w-auto">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+                        View Leads
+                    </button>
+<button type="button" onclick="window.location.href='packages.html#add-package-modal'" class="bg-gradient-to-br from-[#ffb4a8] to-[#920703] hover:opacity-90 text-on-primary font-bold px-5 sm:px-8 py-3 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/10 w-full sm:w-auto">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                        Add Package
+                    </button>
+</div>
+</div>
+<!-- Stats Grid: Bento Style -->
+<div class="grid grid-cols-12 gap-4 sm:gap-6 mb-8 md:mb-10">
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-6">
+<span class="text-stone-500 uppercase tracking-widest text-[10px] font-bold">Volume</span>
+<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+</div>
+<p id="dash-stat-total" class="text-4xl sm:text-5xl font-extrabold editorial-title text-on-surface mb-2">—</p>
+<p class="text-primary text-sm flex items-center gap-1 font-medium">
+                            Total Leads
+                            <span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-6">
+<span class="text-stone-500 uppercase tracking-widest text-[10px] font-bold">Velocity</span>
+<span class="material-symbols-outlined text-secondary" data-icon="new_releases">new_releases</span>
+</div>
+<p id="dash-stat-new-today" class="text-4xl sm:text-5xl font-extrabold editorial-title text-on-surface mb-2">—</p>
+<p class="text-secondary text-sm flex items-center gap-1 font-medium">
+                            New Inquiries
+                            <span class="bg-secondary/10 px-2 py-0.5 rounded-full text-[10px]">Today</span>
+</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-6">
+<span class="text-stone-500 uppercase tracking-widest text-[10px] font-bold">Efficiency</span>
+<span class="material-symbols-outlined text-emerald-400" data-icon="verified">verified</span>
+</div>
+<p id="dash-stat-conversion" class="text-4xl sm:text-5xl font-extrabold editorial-title text-on-surface mb-2">—</p>
+<p class="text-emerald-400 text-sm flex items-center gap-1 font-medium">
+                            Conversion Rate
+                            <span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</p>
+</div>
+</div>
+</div>
+<section class="mb-8 md:mb-10">
+<div class="flex items-center justify-between mb-3">
+<h3 class="editorial-title text-lg md:text-xl font-bold text-on-surface">Careers Analytics</h3>
+<button type="button" onclick="window.location.href='settings.html'" class="text-secondary text-xs font-semibold uppercase tracking-[0.2em] hover:text-white transition-colors">Open Careers CMS</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-high rounded-2xl p-4 sm:p-5 border border-stone-800/40">
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mb-2">Open Roles</p>
+<p id="dash-career-open" class="text-3xl font-extrabold editorial-title text-on-surface">0</p>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-4 sm:p-5 border border-stone-800/40">
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mb-2">Applications</p>
+<p id="dash-career-apps" class="text-3xl font-extrabold editorial-title text-on-surface">0</p>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-4 sm:p-5 border border-stone-800/40">
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mb-2">New Today</p>
+<p id="dash-career-new" class="text-3xl font-extrabold editorial-title text-on-surface">0</p>
+</div>
+</div>
+</section>
+<!-- Main Table Section -->
+<section class="bg-surface-container-high rounded-2xl md:rounded-3xl overflow-hidden">
+<div class="px-4 sm:px-6 md:px-8 py-4 md:py-6 border-b border-stone-800/50 flex justify-between items-center gap-3">
+<h3 class="editorial-title text-lg md:text-xl font-bold text-on-surface">Recent Inquiries</h3>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-stone-800 rounded-lg text-stone-400 transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+<button class="p-2 hover:bg-stone-800 rounded-lg text-stone-400 transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<div class="hidden md:block overflow-x-auto shudh-table-wrap">
+<table class="w-full text-left border-collapse min-w-[640px]">
+<thead>
+<tr class="bg-surface-container-highest/30">
+<th class="px-4 lg:px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500">Client Name</th>
+<th class="px-4 lg:px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500">Event Type</th>
+<th class="px-4 lg:px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500">Scheduled Date</th>
+<th class="px-4 lg:px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500">Status</th>
+<th class="px-4 lg:px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 text-right">Action</th>
+</tr>
+</thead>
+<tbody id="dash-recent-tbody" class="divide-y divide-stone-800/30">
+<tr><td colspan="5" class="px-4 md:px-8 py-8 text-stone-500 text-center">Loading inquiries…</td></tr>
+</tbody>
+</table>
+</div>
+<div id="dash-recent-mobile" class="md:hidden bg-surface-container-highest/10 min-h-[120px]" aria-label="Recent inquiries"></div>
+<div class="p-6 bg-surface-container-highest/10 flex justify-center">
+<button type="button" onclick="window.location.href='leads.html'" class="text-secondary font-semibold text-xs uppercase tracking-[0.2em] hover:text-white transition-colors">View All Leads</button>
+</div>
+</section>
+<!-- Live Graphical Widgets -->
+<section class="mt-4 md:mt-6 space-y-4 sm:space-y-6">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6">
+<article class="bg-surface-container-high rounded-2xl md:rounded-3xl p-5 sm:p-6 border border-stone-800/40">
+<div class="flex items-center justify-between mb-4">
+<h4 class="editorial-title text-lg sm:text-xl font-bold text-on-surface">Event Type Distribution</h4>
+<span class="text-[10px] uppercase tracking-[0.2em] text-stone-500">Live</span>
+</div>
+<div id="dash-event-bars" class="space-y-3">
+<p class="text-sm text-stone-500">Loading event insights...</p>
+</div>
+</article>
+<article class="bg-surface-container-high rounded-2xl md:rounded-3xl p-5 sm:p-6 border border-stone-800/40">
+<div class="flex items-center justify-between mb-4">
+<h4 class="editorial-title text-lg sm:text-xl font-bold text-on-surface">Lead Status Funnel</h4>
+<span class="text-[10px] uppercase tracking-[0.2em] text-stone-500">Live</span>
+</div>
+<div id="dash-status-funnel" class="space-y-3">
+<p class="text-sm text-stone-500">Loading status insights...</p>
+</div>
+</article>
+</div>
+<article class="bg-surface-container-high rounded-2xl md:rounded-3xl p-5 sm:p-6 border border-stone-800/40">
+<div class="flex items-center justify-between mb-4">
+<h4 class="editorial-title text-lg sm:text-xl font-bold text-on-surface">7-Day Inquiry Trend</h4>
+<span class="text-[10px] uppercase tracking-[0.2em] text-stone-500">Last 7 Days</span>
+</div>
+<div id="dash-week-bars" class="grid grid-cols-7 gap-2 sm:gap-3 h-32 sm:h-36 items-end">
+<p class="col-span-7 text-sm text-stone-500">Loading weekly trend...</p>
+</div>
+</article>
+</section>
+</main>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/admin-auth-guard.js"></script>
+<script src="../assets/js/admin-shell.js"></script>
+<script src="../assets/js/admin-app.js"></script>
+</body></html>

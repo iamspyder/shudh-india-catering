@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../assets/css/global.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb4a8",
+                    "inverse-primary": "#b52619",
+                    "secondary-fixed": "#ffe088",
+                    "on-primary-container": "#e34836",
+                    "on-secondary": "#3c2f00",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#342800",
+                    "on-secondary-fixed": "#241a00",
+                    "on-primary-fixed-variant": "#920703",
+                    "on-tertiary": "#3c2f00",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#340000",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-variant": "#353534",
+                    "on-primary": "#690000",
+                    "surface-dim": "#131313",
+                    "secondary": "#e9c349",
+                    "surface-bright": "#393939",
+                    "surface-container-low": "#1c1b1b",
+                    "outline-variant": "#514443",
+                    "outline": "#9e8d8c",
+                    "surface-tint": "#ffb4a8",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#4e3d00",
+                    "on-surface-variant": "#d6c2c1",
+                    "on-primary-fixed": "#410000",
+                    "tertiary-fixed": "#ffe088",
+                    "tertiary": "#e9c349",
+                    "surface-container-highest": "#353534",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "secondary-container": "#af8d11",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#241a00",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "primary-fixed": "#ffdad4",
+                    "inverse-on-surface": "#313030",
+                    "surface": "#131313",
+                    "tertiary-container": "#cba72f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="bg-stone-950 font-manrope tracking-tight h-screen w-64 fixed left-0 top-0 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-12 px-4">
+<h1 class="text-xl font-bold tracking-widest text-[#e9c349] uppercase">The Culinary Noir</h1>
+<p class="text-[10px] text-stone-500 tracking-[0.2em] mt-1">Private Sommelier Mode</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="dashboard.html"><span class="material-symbols-outlined mr-3">dashboard</span>Dashboard</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="packages.html"><span class="material-symbols-outlined mr-3">inventory_2</span>Packages</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="leads.html"><span class="material-symbols-outlined mr-3">contact_mail</span>Leads / Inquiries</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="gallery.html"><span class="material-symbols-outlined mr-3">photo_library</span>Gallery</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-stone-400 hover:text-stone-100 transition-colors duration-200 hover:bg-stone-900" href="content.html"><span class="material-symbols-outlined mr-3">edit_document</span>Content Manager</a>
+<a class="flex items-center px-4 py-3 rounded-lg text-[#e9c349] font-semibold border-r-4 border-[#e9c349] bg-stone-900/50 transition-colors duration-200" href="settings.html"><span class="material-symbols-outlined mr-3">settings</span>Settings</a>
+</nav>
+<div class="mt-auto px-4 pt-4 flex items-center gap-3 bg-stone-900/40 p-4 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="close up headshot of an executive chef in a black uniform with a confident expression in a dimly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3IA-Lyx_qslmKfDH33XJKEF3ErOvE-WjR2H7JVNP47RjMpl9pWYltewuTQNb9UdPfp5keEW-NiV31yLIRsEuPwtmvbrAxIVCE2wOQcFKeKrifNEUhwfLsiaKgu6EJUDVApoUmqnfLIOvMvyOg2IXEFkBz63l4TvY0GyxHjCzPBcshR9J1qL0q760lFwZGfyrEEz05lgNiCxLobiiyRGrQa6nfWE4AlMpzETNUFHtW4r5mGn_fgSjhYN1hV2RwjWqckQ1C3wDyTB3"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-on-surface truncate">Admin Profile</p>
+<p class="text-[10px] text-stone-500 truncate">Catering Director</p>
+</div>
+</div>
+<div class="mt-4 px-4"><a href="../website/index.html" class="flex items-center gap-2 text-stone-600 hover:text-stone-400 text-xs tracking-wider py-2"><span class="material-symbols-outlined text-sm">arrow_back</span>View Website</a></div></aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-stone-900/60 backdrop-blur-xl flex items-center justify-between px-8 z-40 shadow-sm font-inter text-sm">
+<div class="flex items-center gap-4 bg-stone-800/30 px-4 py-2 rounded-full focus-within:ring-1 focus-within:ring-[#e9c349]/40 transition-all w-96">
+<span class="material-symbols-outlined text-stone-400">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-full text-stone-200" placeholder="Search applications or settings..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-stone-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-on-primary-container rounded-full"></span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs font-medium text-stone-300">Admin Dashboard</span>
+<img class="w-8 h-8 rounded-full" data-alt="Admin Avatar profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCK8zwQ6sNXSCEVoiTxgwhmO5cCYGq-wF4IsrvBuJ_Bmb2K8tv5qCsFjFFGuSsGAyrnBFBVhcx3neN9nDk_7wCK_EPdLlH7CaTRc9fwxYJPbyRwi5MfYKL55s9P9Lqk-4X6XJ52Daiob4kHN4rFoHfCag2uuMnlcElhwICKCCGCf9ovNo2shdtzw6lZ_NSAwab8THLLhpC_e7eHhJw5MdbwbggYCpzTMkHNp4BASB44VUvCBAy8jMGKmUaqSSvrI055oE7F-3Z3-m8"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 mt-14 md:mt-16 px-3 sm:px-5 md:px-8 min-h-[calc(100dvh-3.5rem)] md:min-h-[calc(100vh-4rem)] overflow-y-auto bg-surface-container-low no-scrollbar max-w-full min-w-0 pb-[max(1rem,env(safe-area-inset-bottom))]">
+<div class="p-4 sm:p-6 lg:p-10 space-y-8 sm:space-y-10 lg:space-y-12 max-w-7xl mx-auto">
+<!-- Page Header -->
+<section>
+<h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-2">Settings</h2>
+<p class="text-sm sm:text-base text-stone-400 max-w-2xl">Manage live data only. All values here are connected to Firestore collections.</p>
+</section>
+<section class="space-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Careers CMS</span>
+<h3 class="font-headline text-xl sm:text-2xl font-bold mt-1">Jobs &amp; Applications</h3>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<div class="bg-surface-container-high rounded-2xl p-5 sm:p-6 space-y-4 border border-stone-800/40">
+<h4 class="text-base sm:text-lg font-bold">Create Job Opening</h4>
+<form id="careers-job-form" class="space-y-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input id="job-title" type="text" placeholder="Job title (e.g. Sous Chef)" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/>
+<select id="job-category" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm">
+<option value="culinary">Culinary</option>
+<option value="operations">Operations</option>
+<option value="hospitality">Hospitality</option>
+<option value="admin">Admin</option>
+</select>
+<input id="job-location" type="text" placeholder="Location" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/>
+<input id="job-type" type="text" placeholder="Type (Full-time / Contract)" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/>
+<input id="job-experience" type="text" placeholder="Experience (e.g. 5y+)" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/>
+<input id="job-order" type="number" min="0" step="1" placeholder="Display order" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/>
+</div>
+<textarea id="job-summary" rows="3" placeholder="Role summary..." class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"></textarea>
+<div class="flex items-center gap-3">
+<button type="submit" class="px-5 py-3 rounded-xl bg-secondary text-on-secondary font-bold text-sm">Create Job</button>
+<button id="job-edit-cancel" type="button" class="px-4 py-3 rounded-xl border border-stone-700 text-stone-300 text-sm hidden">Cancel Edit</button>
+<p id="careers-job-msg" class="text-xs text-secondary"></p>
+</div>
+</form>
+<div id="careers-jobs-admin-list" class="space-y-3 pt-2"></div>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-5 sm:p-6 space-y-4 border border-stone-800/40">
+<h4 class="text-base sm:text-lg font-bold">Recent Applicants</h4>
+<p class="text-xs text-stone-500">Resume links open in a new tab. Applicants come from the public Careers form.</p>
+<div class="shudh-scroll-hidden-scrollbar max-h-[min(65vh,40rem)] overflow-y-auto overflow-x-hidden overscroll-y-contain rounded-xl border border-stone-800/40 p-3 bg-stone-950/25">
+<div id="careers-applicants-admin" class="space-y-3 min-h-0"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="space-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Dynamic Modules</span>
+<h3 class="font-headline text-2xl font-bold mt-1">Connected Settings</h3>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-5 sm:p-6 border border-stone-800/40">
+<p class="text-sm text-stone-400">Only live, dynamic settings are shown on this page. Static demo cards have been removed.</p>
+</div>
+</section>
+<section class="space-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Public Widget</span>
+<h3 class="font-headline text-2xl font-bold mt-1">Quick Contact Widget</h3>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-5 sm:p-6 border border-stone-800/40">
+<form id="widget-settings-form" class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<div><label class="text-xs text-stone-400">Call Number</label><input id="widget-call-number" type="text" placeholder="+91 98765 43210" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/></div>
+<div><label class="text-xs text-stone-400">WhatsApp Number</label><input id="widget-whatsapp-number" type="text" placeholder="+91 98765 43210" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/></div>
+<div><label class="text-xs text-stone-400">Instagram URL</label><input id="widget-instagram-url" type="url" placeholder="https://instagram.com/yourprofile" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/></div>
+<div><label class="text-xs text-stone-400">YouTube URL</label><input id="widget-youtube-url" type="url" placeholder="https://youtube.com/@yourchannel" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm"/></div>
+</div>
+<div class="flex items-center gap-3">
+<button type="submit" class="px-5 py-3 rounded-xl bg-secondary text-on-secondary font-bold text-sm">Save Widget Settings</button>
+<p id="widget-settings-msg" class="text-xs text-secondary"></p>
+</div>
+</form>
+</div>
+</section>
+<section class="space-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Live Data</span>
+<h3 class="font-headline text-2xl font-bold mt-1">Dynamic Snapshot Cards</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+<article class="rounded-2xl bg-surface-container-high border border-stone-800/40 p-5">
+<p class="text-[11px] uppercase tracking-wider text-stone-500">Leads / Inquiries</p>
+<p id="settings-stat-leads" class="mt-2 text-3xl font-headline font-bold text-on-surface">--</p>
+</article>
+<article class="rounded-2xl bg-surface-container-high border border-stone-800/40 p-5">
+<p class="text-[11px] uppercase tracking-wider text-stone-500">Packages</p>
+<p id="settings-stat-packages" class="mt-2 text-3xl font-headline font-bold text-on-surface">--</p>
+</article>
+<article class="rounded-2xl bg-surface-container-high border border-stone-800/40 p-5">
+<p class="text-[11px] uppercase tracking-wider text-stone-500">Media Items</p>
+<p id="settings-stat-media" class="mt-2 text-3xl font-headline font-bold text-on-surface">--</p>
+</article>
+<article class="rounded-2xl bg-surface-container-high border border-stone-800/40 p-5">
+<p class="text-[11px] uppercase tracking-wider text-stone-500">Active Jobs</p>
+<p id="settings-stat-jobs-live" class="mt-2 text-3xl font-headline font-bold text-on-surface">--</p>
+</article>
+</div>
+<div class="bg-surface-container-high rounded-2xl p-4 border border-stone-800/40">
+<p class="text-xs text-stone-400">Applications received: <span id="settings-stat-applications" class="text-on-surface font-semibold">--</span></p>
+<p id="settings-stats-updated" class="text-[11px] text-stone-500 mt-1">Last synced: --</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/admin-auth-guard.js"></script>
+<script src="../assets/js/admin-shell.js"></script>
+<script src="../assets/js/admin-app.js"></script>
+</body></html>

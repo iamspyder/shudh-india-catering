@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | Shudh India</title>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","secondary-container":"#e8f5e9","on-secondary-container":"#1b5e20","tertiary":"#735c00","tertiary-fixed-dim":"#e9c349","surface":"#FCF8F1","on-surface":"#1b1c15","on-surface-variant":"#5b403d","surface-container-low":"#FDF2EE","surface-container":"#efeee3","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","background":"#FCF8F1"}}}}</script>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<script src="../assets/js/shudh-first-paint.js"></script>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo" aria-label="Shudh India Home"><img src="../assets/logo/logonew.png" alt="Shudh India" class="site-logo__image" /></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="packages.html">Packages</a>
+      <a href="videos.html">Videos</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="careers.html" class="active">Careers</a><a href="contact.html">Contact</a>
+    </nav>
+    <a href="inquiry.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="packages.html">Packages</a>
+  <a href="videos.html">Videos</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="careers.html" class="active">Careers</a><a href="contact.html">Contact</a>
+  <a href="inquiry.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<!-- Hero with image bg -->
+<section class="careers-hero">
+  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhN2Ni0XvnHLBd0sCzK8xRQKT0c8x7qackEIaXs1jsrJBNQm61DGguYs-gFf7CCOVQ29IpWA8IIbwCkJvbgShMCiTjY1yp5Ow2k_tizIi7rGmAtTunPSzpbInbBMgXCVNlNpC3mq5rZRIMEMN9LoMDLNbW5wkJjMEVkRqvlMzDfEhgjOzCEKjNNjAjxzUgKqpBDr5Lj5mVEgTR01pUJCJt0jPXKkMIlBVY1aHx8-8zJTAp0tGX1xkSI5K4sEBb2DTNC93BLUoX" alt="Kitchen"/>
+  <div class="careers-hero__overlay"></div>
+  <div style="position:relative;z-index:1;text-align:center;padding:0 1.5rem">
+    <span class="page-hero__eyebrow">Join Our Team</span>
+    <h1 class="page-hero__title">Careers at <span class="accent">Shudh India</span></h1>
+    <p class="page-hero__subtitle">Where passion meets purpose — join a growing team of culinary artisans</p>
+  </div>
+</section>
+
+<!-- Job Listings -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="text-align:center;margin-bottom:.75rem">Open Positions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:3rem">Find Your <span class="accent">Role</span></h2>
+    <div id="careers-jobs-root" class="careers-grid">
+      <div class="card" style="padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem">
+            <span style="background:var(--color-secondary-container);color:var(--color-on-secondary-container);padding:.3rem 1rem;border-radius:9999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Full Time</span>
+            <span class="material-symbols-outlined" style="color:var(--color-tertiary)">restaurant</span>
+          </div>
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.25rem;margin-bottom:.75rem">Executive Sous Chef</h3>
+          <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Lead our culinary innovation with passion, overseeing high-end catering events and menu development.</p>
+        </div>
+        <button type="button" data-open-careers-modal data-career-role="Executive Sous Chef" class="btn btn-primary" style="justify-content:center">Apply Now <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></button>
+      </div>
+      <div class="card" style="padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem">
+            <span style="background:var(--color-secondary-container);color:var(--color-on-secondary-container);padding:.3rem 1rem;border-radius:9999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em">On-Site</span>
+            <span class="material-symbols-outlined" style="color:var(--color-tertiary)">skillet</span>
+          </div>
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.25rem;margin-bottom:.75rem">Event Manager</h3>
+          <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Curate unforgettable luxury experiences and manage logistics for India's most prestigious events.</p>
+        </div>
+        <button type="button" data-open-careers-modal data-career-role="Event Manager" class="btn btn-primary" style="justify-content:center">Apply Now <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></button>
+      </div>
+      <div class="card" style="padding:2.25rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem">
+            <span style="background:var(--color-secondary-container);color:var(--color-on-secondary-container);padding:.3rem 1rem;border-radius:9999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Remote</span>
+            <span class="material-symbols-outlined" style="color:var(--color-tertiary)">work</span>
+          </div>
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.25rem;margin-bottom:.75rem">Creative Strategist</h3>
+          <p style="color:var(--color-on-surface-variant);font-size:.9375rem;line-height:1.65">Tell the Shudh India story through digital content, brand narrative, and artisanal marketing campaigns.</p>
+        </div>
+        <button type="button" data-open-careers-modal data-career-role="Creative Strategist" class="btn btn-primary" style="justify-content:center">Apply Now <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Culture -->
+<section class="section" style="background:var(--color-surface-container-low)">
+  <div class="section-inner">
+    <div class="shudh-two-col">
+      <div>
+        <h2 style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,3rem);line-height:1.25;margin-bottom:1.5rem">
+          We believe in <span class="font-moment" style="color:var(--color-primary);font-size:1.25em">passion</span>,<br/>creativity &amp; <span class="font-moment" style="color:var(--color-primary);font-size:1.25em">excellence</span>.
+        </h2>
+        <p style="color:var(--color-on-surface-variant);font-size:1.0625rem;line-height:1.75;max-width:540px;margin-bottom:2rem">Our culture is rooted in the rich traditions of Indian hospitality, blended with modern innovation. Join a team where your craft is celebrated every day.</p>
+        <div style="display:flex;gap:2.5rem">
+          <div><span style="font-family:var(--font-headline);font-weight:800;font-size:2.25rem;color:var(--color-tertiary);display:block">150+</span><span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#71717a">Artisans</span></div>
+          <div style="width:1px;background:var(--color-outline-variant);align-self:stretch"></div>
+          <div><span style="font-family:var(--font-headline);font-weight:800;font-size:2.25rem;color:var(--color-tertiary);display:block">12</span><span style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#71717a">Locations</span></div>
+        </div>
+      </div>
+      <div class="shudh-culture-media">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK7wuZrN0e0chXqfu9Mbar3m_rhrbkB9feQHfOEjdhyNc53v2ctwecJMcomMixcwPJEkwyECJpB_3KOzk_m6DTC-S5yx5V2s7IsZNmmL84PHCEZagB-2k_mLM3fy5rETrRyeAthyYLxl6RfKdfIloDwgh3vilxLViQNSakfon3QcOAVDtGN3t84zwk-8vFANedDiaJOwTpIVNyp---sQZ1ztch40ba_5I_5JYnGHjf9plXwOH-rjDVwLJHExpXYMeJOxQTklLpH9Qy" alt="Team"/>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgBWDs9067AW0PEuN61ESIIgsvtvXbB_mi8IJt3Y1ri74VFRw7Hiwb9uFEUhGrSDyWSFaRb4_P0TIta9Xr4wiTX2OeixzFTX6EgdNxBVar-Xt7_0RjR_oKWPxTke9gaIvGVO71LJV9f71P3EIQDvVvGZ4B9IQc-gR8QS3WajoqCh8PlTlhuZpLNGEXCDUmp2kLMBnPwQTwqrwsWIJfxR3HZqrU67ZgzZziTnSo6iZHTbfUhgWvlAACD5IBAkCSeV39U1Z0_VCV0rQ" alt="Meeting"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Application CTA -->
+<section class="section" id="apply">
+  <div class="section-inner" style="max-width:720px;margin:0 auto">
+    <div class="card" style="padding:3rem;text-align:center">
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem">Start Your Journey</h2>
+      <p class="section-desc" style="text-align:center;margin-bottom:1.75rem">Fill the application form and our hiring team will contact you shortly.</p>
+      <button type="button" data-open-careers-modal class="btn btn-primary" style="justify-content:center;padding:1rem 1.6rem">
+        Apply for a Role <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Careers Application Modal -->
+<div id="application-modal" class="hidden shudh-modal-shell" role="dialog" aria-modal="true" aria-labelledby="careers-modal-title">
+  <div class="shudh-modal-card">
+    <div class="shudh-modal-header">
+      <div class="shudh-modal-header__text">
+        <p class="shudh-modal-kicker">Careers</p>
+        <h3 id="careers-modal-title" class="shudh-modal-title">Application Form</h3>
+      </div>
+      <button type="button" class="shudh-modal-close" data-close-careers-modal aria-label="Close application form">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+    </div>
+    <form id="careers-application-form" class="shudh-modal-form-grid">
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-fullName">Full Name</label>
+        <input class="form-input" id="careers-fullName" name="fullName" type="text" placeholder="John Doe" autocomplete="name"/>
+      </div>
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-email">Email Address</label>
+        <input class="form-input" id="careers-email" name="email" type="email" placeholder="john@example.com" autocomplete="email"/>
+      </div>
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-phone">Phone Number</label>
+        <input class="form-input" id="careers-phone" name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"/>
+      </div>
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-role">Desired Position</label>
+        <select class="form-select" id="careers-role" name="role">
+          <option value="">Select role</option>
+        </select>
+      </div>
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-experience">Experience</label>
+        <input class="form-input" id="careers-experience" name="experience" type="text" placeholder="e.g. 5+ years"/>
+      </div>
+      <div class="shudh-modal-field">
+        <label class="form-label" for="careers-resume">Resume Link</label>
+        <input class="form-input" id="careers-resume" name="resumeUrl" type="url" placeholder="https://drive.google.com/..."/>
+      </div>
+      <div class="shudh-modal-field shudh-modal-field--full">
+        <label class="form-label" for="careers-cover">Cover Letter</label>
+        <textarea class="form-textarea" id="careers-cover" name="coverLetter" rows="4" placeholder="Tell us why you'd be a great fit..."></textarea>
+      </div>
+      <p id="careers-form-msg" class="shudh-modal-form-msg" role="status"></p>
+      <div class="shudh-modal-actions">
+        <button type="button" data-close-careers-modal class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="footer-brand__logo"><img src="../assets/logo/logonew.png" alt="Shudh India" class="footer-brand__image" /></div>
+      <p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades. We combine ancestral recipes with avant-garde presentation.</p>
+      <div class="footer-socials">
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">thumb_up</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Signature</h4>
+      <div class="footer-tags">
+        <span class="footer-tag">Aromatic Spices</span>
+        <span class="footer-tag">Farm Fresh</span>
+        <span class="footer-tag">Artisanal Plating</span>
+        <span class="footer-tag">Vegan Friendly</span>
+      </div>
+      <p class="footer-cert">View Hygiene Certification</p>
+      <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Call Us:</strong> +91 98765 43210</p>
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Email:</strong> concierge@shudhindia.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p>
+    <div style="display:flex;gap:1.5rem">
+      <a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">Terms</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">FAQ</a>
+    </div>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/public-content.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../assets/js/public-site.js"></script>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+  var modal = document.getElementById('application-modal');
+  var roleSelect = document.getElementById('careers-role');
+  document.querySelectorAll('[data-open-careers-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var role = btn.getAttribute('data-career-role');
+      if (roleSelect && role) roleSelect.value = role;
+      if (modal) modal.classList.remove('hidden');
+    });
+  });
+</script>
+</body></html>

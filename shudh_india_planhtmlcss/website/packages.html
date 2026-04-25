@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#9e8d8c",
+                        "secondary-fixed": "#ffe088",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#ece0df",
+                        "tertiary-container": "#141608",
+                        "secondary": "#e9c349",
+                        "primary-container": "#2a0a0a",
+                        "on-tertiary": "#303221",
+                        "on-secondary-container": "#342800",
+                        "on-primary": "#4c2524",
+                        "on-surface": "#ece0df",
+                        "primary-fixed-dim": "#f5b7b4",
+                        "surface-container": "#241e1e",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "on-surface-variant": "#d6c2c1",
+                        "on-primary-container": "#a6716f",
+                        "inverse-primary": "#815250",
+                        "surface-variant": "#3a3333",
+                        "secondary-container": "#af8d11",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#331110",
+                        "primary": "#f5b7b4",
+                        "on-secondary": "#3c2f00",
+                        "surface-container-lowest": "#120d0d",
+                        "on-background": "#ece0df",
+                        "surface-container-low": "#201a1a",
+                        "surface-container-highest": "#3a3333",
+                        "surface-container-high": "#2f2828",
+                        "surface": "#171212",
+                        "background": "#171212"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(58, 51, 51, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #F5E0A3, #AF8D11);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #2a0a0a 0%, #171212 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A0505]/85 backdrop-blur-xl border-b border-[#D4AF37]/10 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8 py-4">
+<span class="text-2xl font-headline text-[#D4AF37] tracking-widest uppercase">Shudh India</span>
+<div class="hidden md:flex items-center gap-5 lg:gap-8">
+<a class="font-headline text-sm lg:text-base font-medium tracking-wide text-[#ECE0DF] opacity-80 hover:text-[#D4AF37] hover:scale-105 transition-all duration-300" href="index.html">Heritage</a>
+<a class="font-headline text-sm lg:text-base font-medium tracking-wide text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 hover:scale-105 transition-all duration-300" href="packages.html">Packages</a>
+<a class="font-headline text-sm lg:text-base font-medium tracking-wide text-[#ECE0DF] opacity-80 hover:text-[#D4AF37] hover:scale-105 transition-all duration-300" href="gallery.html">Gallery</a>
+<a class="font-headline text-sm lg:text-base font-medium tracking-wide text-[#ECE0DF] opacity-80 hover:text-[#D4AF37] hover:scale-105 transition-all duration-300" href="videos.html">Videos</a>
+<a class="font-headline text-sm lg:text-base font-medium tracking-wide text-[#ECE0DF] opacity-80 hover:text-[#D4AF37] hover:scale-105 transition-all duration-300" href="careers.html">Careers</a>
+</div>
+<button onclick="window.location=\'inquiry.html\'" class="bg-secondary-container text-on-secondary px-8 py-2.5 rounded-full font-semibold hover:scale-105 transition-all duration-300 active:scale-95 shadow-lg" onclick="window.location='inquiry.html'">Get Quote</button>
+</div>
+
+<div id="mobile-menu" class="hidden md:hidden fixed top-[65px] left-0 w-full z-40 bg-[#1A0505]/98 backdrop-blur-xl border-b border-[#D4AF37]/10 py-6 px-6 space-y-4">
+  <a class="block font-headline text-base text-[#ECE0DF] hover:text-[#D4AF37] transition-colors py-2 border-b border-stone-800/40" href="index.html">Heritage</a>
+  <a class="block font-headline text-base text-[#ECE0DF] hover:text-[#D4AF37] transition-colors py-2 border-b border-stone-800/40" href="packages.html">Packages</a>
+  <a class="block font-headline text-base text-[#ECE0DF] hover:text-[#D4AF37] transition-colors py-2 border-b border-stone-800/40" href="gallery.html">Gallery</a>
+  <a class="block font-headline text-base text-[#ECE0DF] hover:text-[#D4AF37] transition-colors py-2 border-b border-stone-800/40" href="videos.html">Videos</a>
+  <a class="block font-headline text-base text-[#ECE0DF] hover:text-[#D4AF37] transition-colors py-2" href="careers.html">Careers</a>
+</div>
+</nav>
+<main class="pt-28 pb-24 hero-gradient min-h-screen">
+<!-- Header Section -->
+<header class="max-w-7xl mx-auto px-8 mb-20 text-center">
+<span class="uppercase tracking-[0.3em] text-secondary text-sm font-semibold mb-4 block">Exquisite Catering</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface leading-tight mb-6">
+                Curated <span class="italic font-normal">Packages</span>
+</h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant text-lg leading-relaxed font-light">
+                Elevating your celebrations with artisanal Indian cuisine and bespoke service. Select a tier that reflects your vision of grandeur.
+            </p>
+</header>
+<!-- Packages Bento Grid -->
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Silver Package -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,13,13,0.3)]">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of elegant silver service setting with traditional Indian appetizer plates on a dark textured tablecloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSjuVYQFNLme8sRwKXuFho-CTw_fGuw9Xcgdtdo4WDEQQ8in4j7NThGaWceY00exrOu69-5_2kXqwB-r79T3vGKCzruets_dRxrix7YJPcLhOf4y_Pbklp5v581BUJwI7CtIs7LZu4QdKORblwEL40mDI93VRvuGJPrQl9uW__w_NihkgmWhy0MFfwJrbqyK_iD7sbXkKayeJmUD_UhyciLPeeMHGm2jA2oqsQQ4aw9qu6f0VWfjUVZY36U-C9u03OQG3dJ6Z6f-vC"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-outline text-3xl">restaurant</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface">Silver</h3>
+</div>
+<p class="text-on-surface-variant mb-8 font-light">Essential luxury for intimate gatherings and corporate soirées.</p>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>4 Signature Appetizers</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Standard Main Course Buffet</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Classic Dessert Duo</span>
+</li>
+</ul>
+<div class="p-4 rounded-xl bg-surface-container-highest/30 border border-outline-variant/10 mb-8">
+<span class="text-xs uppercase tracking-widest text-secondary block mb-1">Best For</span>
+<span class="text-on-surface font-medium">50 - 100 Guests</span>
+</div>
+</div>
+<button class="relative z-10 w-full py-4 rounded-xl border border-secondary/30 text-secondary font-semibold hover:bg-secondary hover:text-on-secondary transition-all duration-300">
+                    Get Custom Quote
+                </button>
+</div>
+<!-- Gold Package (Most Popular) -->
+<div class="group relative bg-primary-container rounded-xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 ring-1 ring-secondary/50 shadow-[0_30px_60px_rgba(42,10,10,0.5)] transform scale-105 z-20">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary px-6 py-1 rounded-full text-xs font-bold tracking-widest uppercase shadow-lg shadow-secondary/20">
+                    Most Popular
+                </div>
+<div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant gourmet Indian thali presentation with gold-rimmed bowls and saffron-infused dishes under warm atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkkMXByuLBPOq0zfDpQD6U5YbaCuCjiwx8T2xGT58lPrc8LLM7WGrxt68qp-SpcfLcaW9T_MdrPWc18q3kn8lxzG-DOkAME96RmoTyygs0RiVN5ZgG8RTD3WD0XdxvfMWbkHSnJIHYZtGYlSQRyHh4tmHmT2q_WasxG0Qeh7lmBvaDEeUpyTWiRT02njLOucVCD8Lk4y6UworwL1quznpcwWF3rtribMCDkAdlPsFkDuNVkbrXU8le1N4yB3mhNxoBLk06IC2JPCM"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-weight="fill">workspace_premium</span>
+<h3 class="text-4xl font-headline font-bold text-secondary">Gold</h3>
+</div>
+<p class="text-on-primary-container mb-8 font-light text-lg">The gold standard for weddings and grand gala celebrations.</p>
+<ul class="space-y-5 mb-12">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span>6 Artisanal Starters</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span>Live Tandoor &amp; Chaat Counters</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span>Premium Main Course Selection</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span>Trio of Signature Desserts</span>
+</li>
+</ul>
+<div class="p-4 rounded-xl bg-secondary/10 border border-secondary/20 mb-8">
+<span class="text-xs uppercase tracking-widest text-secondary block mb-1">Best For</span>
+<span class="text-on-surface font-medium">150 - 500 Guests</span>
+</div>
+</div>
+<button class="relative z-10 w-full py-5 rounded-xl bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-bold text-lg hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300">
+                    Get Custom Quote
+                </button>
+</div>
+<!-- Premium Package -->
+<div class="group relative bg-surface-container-low rounded-xl p-10 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,13,13,0.3)]">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Ultra-premium fine dining setting with dark marble table, crystal glassware, and minimalist floral arrangement in a luxury venue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyyqphzBvaq2-MUPFgp5L_EMBvEqbEmM4QpzVVd02eV6yqOs-odeySr9ySVVfAyDZLV-5avldFDm_D_7ATJc3YPMJtTLRGL_mAVrCsSqkiT0e9yUojDbKg1_jnftP7I6uLn6JT3GAshYi0r_kbz8HfT6A2CrgwWnzJjzfivolsGFzN1WLEnZa-DueMWscqENf_PUzhQtLPbZ67i-xFjkA89IyZQTrVuLCuDY7qy2xXQWs9iFBH_3dFqOFLltmM94UCT7-yKHWNsKD0"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-outline text-3xl">star_half</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface">Premium</h3>
+</div>
+<p class="text-on-surface-variant mb-8 font-light">Unrivaled culinary theater for the most discerning hosts.</p>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Unlimited Global Fusion Starters</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Interactive Chef Stations</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Exclusive Dessert Gallery</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface/90">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Dedicated Butler Service</span>
+</li>
+</ul>
+<div class="p-4 rounded-xl bg-surface-container-highest/30 border border-outline-variant/10 mb-8">
+<span class="text-xs uppercase tracking-widest text-secondary block mb-1">Best For</span>
+<span class="text-on-surface font-medium">500+ Guests</span>
+</div>
+</div>
+<button class="relative z-10 w-full py-4 rounded-xl border border-secondary/30 text-secondary font-semibold hover:bg-secondary hover:text-on-secondary transition-all duration-300">
+                    Get Custom Quote
+                </button>
+</div>
+</div>
+<!-- Call to Action Section -->
+<section class="max-w-5xl mx-auto px-8 mt-32 text-center">
+<div class="glass-card p-16 rounded-[2rem] border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary-container rounded-full blur-3xl opacity-30"></div>
+<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl opacity-20"></div>
+<h2 class="text-4xl font-headline font-bold mb-6 text-on-surface">Seeking something bespoke?</h2>
+<p class="text-on-surface-variant mb-10 max-w-xl mx-auto leading-relaxed">
+                    Our master chefs can curate a custom menu that aligns perfectly with your event's theme and dietary preferences. Let's create an unforgettable culinary journey.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-bold tracking-wide hover:scale-105 transition-all">Download Brochure</button>
+<button class="px-10 py-4 rounded-full font-bold border border-outline-variant/30 text-on-surface hover:bg-surface-variant/30 transition-all" onclick="window.location='inquiry.html'">Schedule Consultation</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#D4AF37]/10 bg-[#2A0A0A]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="col-span-1 md:col-span-2">
+<div class="text-xl font-serif text-[#D4AF37] mb-4 uppercase tracking-widest">Shudh India</div>
+<p class="text-[#ECE0DF]/60 max-w-sm font-body text-sm tracking-tight mb-8">
+                    Elevating Indian culinary traditions with a modern lens. From intimate gatherings to grand spectacles, we bring the essence of Shudh hospitality to your table.
+                </p>
+<div class="flex gap-6">
+<a class="text-[#D4AF37] hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-[#D4AF37] hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-[#D4AF37] hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">share_reviews</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-[#D4AF37] font-semibold mb-6 uppercase text-xs tracking-[0.2em]">Quick Links</h4>
+<div class="flex flex-col gap-4">
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Catering FAQs</a>
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Our Venues</a>
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Sustainability</a>
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Contact Us</a>
+</div>
+</div>
+<div>
+<h4 class="text-[#D4AF37] font-semibold mb-6 uppercase text-xs tracking-[0.2em]">Legal</h4>
+<div class="flex flex-col gap-4">
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Terms of Service</a>
+<a class="text-[#ECE0DF]/60 hover:text-[#D4AF37] transition-colors duration-200 text-sm" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-[#D4AF37]/5 text-center">
+<p class="text-[#ECE0DF]/40 text-xs tracking-widest font-body uppercase">© 2024 Shudh India. Elevating Culinary Tradition.</p>
+</div>
+<div style="text-align:center;padding:12px 0;background:#0e0000;border-top:1px solid rgba(212,175,55,0.1)"><a href="../admin/dashboard.html" style="color:#6B4A00;font-size:11px;letter-spacing:0.1em;text-decoration:none;font-family:Manrope,sans-serif">Admin Panel</a></div></footer>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+</script>
+</body></html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shudh India | Artisanal Culinary Excellence</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          "primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff",
+          "primary-fixed":"#ffdad6","primary-fixed-dim":"#ffb3ac",
+          "secondary":"#2E7D32","on-secondary":"#ffffff","secondary-container":"#e8f5e9",
+          "on-secondary-container":"#1b5e20","secondary-fixed":"#9df898",
+          "tertiary":"#735c00","on-tertiary":"#ffffff","tertiary-container":"#cca730",
+          "on-tertiary-container":"#4f3e00","tertiary-fixed":"#ffe088","tertiary-fixed-dim":"#e9c349",
+          "surface":"#FCF8F1","on-surface":"#1b1c15","surface-variant":"#e4e3d7",
+          "on-surface-variant":"#5b403d","surface-dim":"#dbdbcf","surface-bright":"#fbfaee",
+          "surface-container-lowest":"#ffffff","surface-container-low":"#FDF2EE",
+          "surface-container":"#efeee3","surface-container-high":"#F0F4ED",
+          "surface-container-highest":"#e4e3d7","inverse-surface":"#303129",
+          "inverse-on-surface":"#f2f1e5","outline":"#8f6f6c","outline-variant":"#e4beba",
+          "on-primary-container":"#fff2f0","error":"#ba1a1a","on-error":"#ffffff",
+          "background":"#FCF8F1","on-background":"#1b1c15"
+        }
+      }}
+    }
+  </script>
+  <style>
+    .hero-gradient { background: linear-gradient(to right, rgba(252,248,241,0.92) 0%, rgba(252,248,241,0.65) 55%, transparent 100%); }
+    @keyframes bounceSlow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .animate-bounce-slow { animation: bounceSlow 4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface" style="font-family:var(--font-body)">
+
+<!-- ===== SHARED HEADER ===== -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">restaurant_menu</span>
+      Shudh India
+    </a>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/gallery.html">Gallery</a>
+      <a href="pages/package.html">Packages</a>
+      <a href="pages/videos.html">Videos</a>
+      <a href="pages/aboutus.html">About</a>
+      <a href="pages/carrer.html">Careers</a>
+    </nav>
+    <a href="pages/getquote.html" class="site-header__cta">
+      Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="active">Home</a>
+  <a href="pages/gallery.html">Gallery</a>
+  <a href="pages/package.html">Packages</a>
+  <a href="pages/videos.html">Videos</a>
+  <a href="pages/aboutus.html">About</a>
+  <a href="pages/carrer.html">Careers</a>
+  <a href="pages/getquote.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section style="position:relative;min-height:100vh;display:flex;align-items:center;padding-top:72px;overflow:hidden;background:var(--color-surface)">
+  <div style="position:absolute;inset:0;z-index:0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpDx9uyIMELKzoxjZlM_5ubKOaeuLItQ_jc_telsflSGWbE0oIj79sNCNHFW5WRn3R4G15oU7nVep7uLmKGtaNUajMIQ8Sn-e0ZDWXwJMM8t2qpAfSHSjvsxzCvNuQx_Jx24_0M4Bq_bJ55nSd9y_ysoRCQ8TkHPhAEfSMmPPoysN0Xdpwz7HfvzsPPF5A-mMlGhrQ99fQ2ilApSSWi2Hagjp0jkki08hMEN5wWDcgMCfZu1elP3Ijlo_-jAkYrjjylNTw3QpLvdz2" alt="Luxurious banquet hall" style="width:100%;height:100%;object-fit:cover"/>
+    <div class="hero-gradient" style="position:absolute;inset:0"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;padding-top:2rem;padding-bottom:4rem">
+    <div style="max-width:640px">
+      <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,0.5);backdrop-filter:blur(12px);padding:.4rem 1rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.25);margin-bottom:1.5rem">
+        <span style="color:var(--color-secondary);font-weight:700;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase">Since 2004</span>
+      </div>
+      <h1 class="animate-fade-up" style="font-family:var(--font-headline);font-weight:800;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;color:var(--color-on-surface);margin-bottom:1.5rem">
+        Celebrate Every<br/>
+        <span class="font-moment animate-fade-up animate-delay-1" style="color:var(--color-primary);font-size:1.3em;display:inline-block;transform:rotate(-2deg)">Moment</span><br/>
+        with Exquisite Flavor
+      </h1>
+      <p class="animate-fade-up animate-delay-2" style="font-size:1.0625rem;color:var(--color-on-surface-variant);line-height:1.75;max-width:480px;margin-bottom:2rem">
+        Crafting bespoke culinary journeys for life's most precious celebrations. From intimate gatherings to grand nuptials, we bring the soul of India to your table.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem" class="animate-fade-up animate-delay-3">
+        <a href="pages/getquote.html" class="btn btn-primary">
+          Get Quote <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_forward</span>
+        </a>
+        <a href="pages/package.html" class="btn btn-secondary">View Packages</a>
+      </div>
+    </div>
+    <!-- Floating Stats -->
+    <div class="animate-bounce-slow" style="display:none;max-width:320px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-radius:1.25rem;padding:2rem;box-shadow:var(--shadow-elevated)" id="statsFloat">
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
+        <div style="display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--color-surface-variant);padding-bottom:1rem">
+          <div style="width:48px;height:48px;background:rgba(175,16,26,0.1);border-radius:9999px;display:flex;align-items:center;justify-content:center;color:var(--color-primary)">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">calendar_month</span>
+          </div>
+          <div>
+            <p style="font-family:var(--font-headline);font-weight:800;font-size:1.5rem">20+</p>
+            <p style="font-size:.8125rem;color:var(--color-on-surface-variant)">Years of Heritage</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--color-surface-variant);padding-bottom:1rem">
+          <div style="width:48px;height:48px;background:rgba(46,125,50,0.1);border-radius:9999px;display:flex;align-items:center;justify-content:center;color:var(--color-secondary)">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">celebration</span>
+          </div>
+          <div>
+            <p style="font-family:var(--font-headline);font-weight:800;font-size:1.5rem">1000+</p>
+            <p style="font-size:.8125rem;color:var(--color-on-surface-variant)">Grand Events</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem">
+          <div style="width:48px;height:48px;background:rgba(115,92,0,0.1);border-radius:9999px;display:flex;align-items:center;justify-content:center;color:var(--color-tertiary)">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">skillet</span>
+          </div>
+          <div>
+            <p style="font-family:var(--font-headline);font-weight:800;font-size:1.5rem">50+</p>
+            <p style="font-size:.8125rem;color:var(--color-on-surface-variant)">Master Chefs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<div class="stats-strip">
+  <div class="stats-strip__grid">
+    <div class="stat-card"><div class="stat-number">98%</div><div class="stat-label">Client Satisfaction</div></div>
+    <div class="stat-card"><div class="stat-number" style="color:var(--color-secondary)">5★</div><div class="stat-label">Google Rating</div></div>
+    <div class="stat-card"><div class="stat-number" style="color:var(--color-tertiary)">10M+</div><div class="stat-label">Meals Served</div></div>
+    <div class="stat-card"><div class="stat-number">150+</div><div class="stat-label">Signature Dishes</div></div>
+  </div>
+</div>
+
+<!-- ===== EXPERIENCES ===== -->
+<section class="section" style="background:var(--color-surface-container-high)">
+  <div class="section-inner">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3.5rem">
+      <div class="section-header">
+        <div class="section-eyebrow">Tailored Excellence</div>
+        <h2 class="section-title">Culinary <span class="accent">Experiences</span> for Every Occasion</h2>
+      </div>
+      <p class="section-desc" style="max-width:380px">Whether it's a dream wedding or a corporate gala, we curate menus that tell your unique story through flavor.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start">
+      <!-- Wedding -->
+      <div style="position:relative;height:560px;overflow:hidden;border-radius:1rem;cursor:pointer" class="exp-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQdcwPnEgti_eNwXygB1GjOgVsCuuXvctPNu2oMq889mOsVb7qYZDI13kaykiGLrjs59q6GQNvBI6ylHZl3oKTLY6hEala7q1pqUAM-fdZ2Pw3QBGXMP79tyhBjHioQh7uDoABj3ZfklOmRo8oJ2quC2mKrors2Zh818N_lYoZy0vBuUW59UTSEqnguwE7xOPh7oqILw-NvJUcqvWUHMaQR1-RwBn7Zy2jUqbIrXs2SzTNCUdSyNUZW6NId7wLFEQP3HIm6C-Wt_y" alt="Wedding catering" style="width:100%;height:100%;object-fit:cover;transition:transform .7s"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,28,21,.9) 0%,rgba(27,28,21,.15) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem">
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.75rem;color:#fff;margin-bottom:1rem">Wedding Catering</h3>
+          <p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9375rem;line-height:1.6">Grand celebratory menus featuring royal Indian delicacies and contemporary global fusions.</p>
+          <a href="pages/package.html" style="color:var(--color-primary-fixed);font-weight:700;display:inline-flex;align-items:center;gap:.4rem">Learn More <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_right_alt</span></a>
+        </div>
+      </div>
+      <!-- Private -->
+      <div style="position:relative;height:560px;overflow:hidden;border-radius:1rem;margin-top:2rem;cursor:pointer" class="exp-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX0iNUneTNT20W_3huiLf96Azu0X9_6zHRGXvwDnqMwUc0VdJhi6DGF-vdUCZYoXLxH9FodA5g8Rhyd3wZlPXnh_4Ev_1XjvZgSy3M18H0kAlKQ49OWd0sng5YskuifSVOSfb_0M5ZmekMqG1anfaxd0kyj4p8Ku56x799DbPjLoPwGwqfDW8SMCxBdsgY6VGz_izKfdDcXsKXfXqiTbPlxsDkr6HMj_F_OR5wf81cXaNVZHHi3wZBcBSFPD3aA2Z6NDpEgINh_Wiz" alt="Private events" style="width:100%;height:100%;object-fit:cover;transition:transform .7s"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,28,21,.9) 0%,rgba(27,28,21,.15) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem">
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.75rem;color:#fff;margin-bottom:1rem">Private Events</h3>
+          <p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9375rem;line-height:1.6">Bespoke dining experiences for anniversaries, birthdays, and high-profile house parties.</p>
+          <a href="pages/getquote.html" style="color:var(--color-primary-fixed);font-weight:700;display:inline-flex;align-items:center;gap:.4rem">Learn More <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_right_alt</span></a>
+        </div>
+      </div>
+      <!-- Corporate -->
+      <div style="position:relative;height:560px;overflow:hidden;border-radius:1rem;cursor:pointer" class="exp-card">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTSqM7uWE28Y94ifoUw762hSgp8ZZvkea0kV5KipOkeWnsAzo6KbVq-2IJGvhdx2sqEN383i9tkM6OamInp0aWtYQ2NiI7dkxGGm8x1CQKt9xK6doe43VV7ybGf2MmsgwrjPLl7ylDvMlg2jNVsTWyP23vbwrM5T7WTgpnp8yyHd90ZGjY6GQhiQXNnkYcXt1xaF1VwwqFAZd6-Gy_TciZBev22U7w5D-oUTSVjfPoQQiwVLYZ76lulgZANVBiHP1lSx_YiefNjhbd" alt="Corporate catering" style="width:100%;height:100%;object-fit:cover;transition:transform .7s"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,28,21,.9) 0%,rgba(27,28,21,.15) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem">
+          <h3 style="font-family:var(--font-headline);font-weight:700;font-size:1.75rem;color:#fff;margin-bottom:1rem">Corporate Catering</h3>
+          <p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9375rem;line-height:1.6">Efficient and impressive dining solutions for boardroom lunches and corporate galas.</p>
+          <a href="pages/getquote.html" style="color:var(--color-primary-fixed);font-weight:700;display:inline-flex;align-items:center;gap:.4rem">Learn More <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_right_alt</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISUAL STORY ===== -->
+<section style="position:relative;height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden">
+  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoRtVTZiICt-sjIzLQgzg-fv3rTmAldI-OuAW1rWNSzEQi3xgGE2YE3nl6NVJBwlO6t7f3d7FDT-FK91D9ujV-ng80uKpZiP3doutBV3wLE7CkbQwsbMsUuAwDAOZM_xR7tD11dJqiAmm1oM53jHn1ti6qc0fZsJxIDKjKtm4vsvF-1fXbOtm7he1ThKbqVNganOxMqk3738esO01nPqnHQyyciUPZoXmthpPRgiAhrsPQQo6l3JoAPvJ79IsgDUjLk-64WjBJVDwS" alt="Outdoor wedding" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+  <div style="position:absolute;inset:0;background:rgba(27,28,21,.45);backdrop-filter:blur(2px)"></div>
+  <div style="position:relative;z-index:1;max-width:720px;padding:0 1.5rem">
+    <h2 style="font-family:var(--font-headline);font-weight:800;font-size:clamp(2rem,5vw,4rem);color:#fff;margin-bottom:1rem">Where Tradition Meets Fine Art</h2>
+    <p style="color:rgba(255,255,255,.9);font-size:1.125rem;line-height:1.75;max-width:520px;margin:0 auto">Every dish is a canvas, every event a masterpiece. We don't just serve food; we create memories.</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY PREVIEW ===== -->
+<section class="section" style="background:var(--color-surface-container-low)">
+  <div class="section-inner">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem">
+      <h2 class="section-title">The Artisanal Gallery</h2>
+      <a href="pages/gallery.html" style="color:var(--color-primary);font-weight:700;font-size:.9375rem">View All →</a>
+    </div>
+    <div class="masonry-grid">
+      <div class="masonry-large" style="overflow:hidden;border-radius:.75rem">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClAMnA0HlVwxdDnW78jBzahtn4VF3YsVQ4jwJIYYGlrcVefPXF2AOC1T-5ZaDCZjcObmnFxMKLlwgiet0l1bUCahE6KB1MKGXeqG1TSNG-IMq1IpLej5k_Ek7yRW9e8n6twc6LmzEjYq022pYyJrbMr8RFcPtG4f2TuFUrXj-UsXOdoJR6sYJ8ZL1C0zoQSC6vSd5ZrrBqe9t2KrkIkz_xA40G1EJbu0PHs_1ClL73XiRleMAMFGxS1lK2VCKy6_IsvXWTBkaVcFmB" alt="Hors d'oeuvres" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"/>
+      </div>
+      <div style="overflow:hidden;border-radius:.75rem"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiFlIubedmGz5PYLuybHYDTzV2mglY9gyOcI5N7tR9dTxY7KyuMs-CxHqqaDFa4X6V3eiMptlBjMlZ-yDm95juVhTkRicxOgV2mwbsYFRPAIxL7LpaCl9IjLM4W30EIGkgQgn_DLIFlVfjlCWV34VfHkBOqveC6venxktyNtBQJazqR5hvnqn-hfqc4Mjzd4smHDh1MQZErkcYcChZmtIJ2UiZFrkMdWP613cm0t8GRxlZi2TSUvH21XuB4Sa9wcMc4SEcjPPl2c4u" alt="Mithai" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div class="masonry-wide" style="overflow:hidden;border-radius:.75rem"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5b6XxFWpIS15ZTEkTT7x0p6IdrEd0nn0p8ODkTa6t6unokqLMKegyL4gb1qpfskbT3CEFFHfg_55B5YOdXoJN9btsxnxd4ATl_0kXYvtgVQlPW4iBU_dFcXk8k6QjNVlzf-ZWO2OVaHE1J2fMSgZn_JzjaFxaasYvYevw7ITZajr-mAXdukgrFa69U8Q3faTUAI9f8S8DkMlemXQivxysjdQUuayqwB32qlsPAGOkvbOEIqROS3kClW5jS1UbtRAG_DYA3AAVIH10" alt="Plating" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div style="overflow:hidden;border-radius:.75rem"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPgsxxm19QlO_9lk2ujpmJ4s2boC8IXHRTrMS65C_V64q13jL4MfidgBj9qYhDBQEBC2EDSlDZxjJQiO093CaRbO6y49LeyQYiyAegznOhCS7mSUlMn1xhB3ZFwjcCcGQfN0ye-yJL_mLgR6llHE350mAma9dn0owcpn9lK3fPZFdy9zwQaS5C_pPYwhH15RnMl72AYajpgCzHpKiAaAkpKYE22UA8gtcepg3_aOpKdqhPXbvVe6ZLUsDUmDCiHCXJXDxA8jlQc821" alt="Spread" style="width:100%;height:100%;object-fit:cover"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT STRIP ===== -->
+<section class="cta-section">
+  <h2>Let's Plan Your Celebration</h2>
+  <p>Our culinary architects are ready to design your perfect menu. Contact us for a personalized consultation.</p>
+  <a href="pages/getquote.html" class="btn" style="background:#fff;color:var(--color-primary);padding:.9rem 2.5rem;font-size:1rem;margin:0 auto">Get My Quote</a>
+</section>
+
+<!-- ===== SHARED FOOTER ===== -->
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="footer-brand__logo">Shudh India</div>
+      <p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades. We combine ancestral recipes with avant-garde presentation.</p>
+      <div class="footer-socials">
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">thumb_up</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+        <li><a href="pages/package.html">Packages</a></li>
+        <li><a href="pages/videos.html">Videos</a></li>
+        <li><a href="pages/aboutus.html">About Us</a></li>
+        <li><a href="pages/carrer.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Signature</h4>
+      <div class="footer-tags">
+        <span class="footer-tag">Aromatic Spices</span>
+        <span class="footer-tag">Farm Fresh</span>
+        <span class="footer-tag">Artisanal Plating</span>
+        <span class="footer-tag">Vegan Friendly</span>
+      </div>
+      <p class="footer-cert">View Hygiene Certification</p>
+      <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Call Us:</strong> +91 98765 43210</p>
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Email:</strong> concierge@shudhindia.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p>
+    <div style="display:flex;gap:1.5rem">
+      <a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">Terms</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger');
+  const mNav = document.getElementById('mobileNav');
+  ham.addEventListener('click', () => mNav.classList.toggle('open'));
+  // Show floating stats on desktop
+  if(window.innerWidth >= 768) document.getElementById('statsFloat').style.display = 'block';
+  // Hover effect for exp cards
+  document.querySelectorAll('.exp-card').forEach(c => {
+    c.addEventListener('mouseenter', () => c.querySelector('img').style.transform = 'scale(1.07)');
+    c.addEventListener('mouseleave', () => c.querySelector('img').style.transform = 'scale(1)');
+  });
+</script>
+</body>
+</html>

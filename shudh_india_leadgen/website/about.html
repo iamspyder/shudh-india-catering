@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Shudh India</title>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#af101a","primary-container":"#8c0d15","on-primary":"#ffffff","secondary":"#2E7D32","on-secondary":"#ffffff","secondary-container":"#e8f5e9","on-secondary-container":"#1b5e20","tertiary":"#735c00","tertiary-container":"#cca730","surface":"#FCF8F1","on-surface":"#1b1c15","surface-variant":"#e4e3d7","on-surface-variant":"#5b403d","surface-container":"#efeee3","surface-container-low":"#FDF2EE","surface-container-high":"#F0F4ED","surface-container-highest":"#e4e3d7","surface-container-lowest":"#ffffff","outline-variant":"#e4beba","outline":"#8f6f6c","background":"#FCF8F1"}}}}</script>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+    .journey-track {
+      position: relative;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0.25rem 0;
+    }
+    .journey-track::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      transform: translateX(-50%);
+      background: rgba(143, 111, 108, 0.35);
+    }
+    .journey-progress {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: top center;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--color-primary), var(--color-tertiary));
+    }
+    .journey-item {
+      position: relative;
+      width: calc(50% - 1.5rem);
+      margin-bottom: 1.15rem;
+    }
+    .journey-card {
+      background: linear-gradient(165deg, rgba(255,255,255,0.96) 0%, rgba(253,246,240,0.98) 100%);
+      border: 1px solid rgba(143, 111, 108, 0.22);
+      border-radius: 1rem;
+      box-shadow: 0 10px 24px rgba(22, 20, 20, 0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .journey-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(175, 16, 26, 0.35);
+      box-shadow: 0 18px 34px rgba(22, 20, 20, 0.13);
+    }
+    .journey-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      background: rgba(175, 16, 26, 0.08);
+      margin-bottom: .6rem;
+    }
+    .journey-tag {
+      margin: 0;
+      padding-top: .65rem;
+      border-top: 1px dashed rgba(143, 111, 108, 0.45);
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: .86rem;
+      letter-spacing: .02em;
+    }
+    .journey-highlight-card {
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background: radial-gradient(circle at top right, rgba(175,16,26,0.12), rgba(255,255,255,0.94) 42%);
+      border: 1px solid rgba(143, 111, 108, 0.22);
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(22, 20, 20, 0.08);
+    }
+    .journey-item:nth-child(even) {
+      margin-left: calc(50% + 1.5rem);
+    }
+    .journey-item::before {
+      content: "";
+      position: absolute;
+      top: 1.1rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 999px;
+      border: 2px solid var(--color-primary);
+      background: var(--color-surface);
+      z-index: 2;
+    }
+    .journey-item:nth-child(odd)::before {
+      right: -1.9rem;
+    }
+    .journey-item:nth-child(even)::before {
+      left: -1.9rem;
+    }
+    .employee-card {
+      overflow: hidden;
+      border-radius: 1rem;
+      border: 1px solid rgba(143, 111, 108, 0.2);
+      background: linear-gradient(170deg, rgba(255,255,255,0.98) 0%, rgba(250,243,235,0.98) 100%);
+      box-shadow: 0 12px 28px rgba(22, 20, 20, 0.1);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .employee-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(175, 16, 26, 0.36);
+      box-shadow: 0 20px 34px rgba(22, 20, 20, 0.14);
+    }
+    .employee-card__image-wrap {
+      border-radius: 0.8rem;
+      overflow: hidden;
+      margin-bottom: 0.9rem;
+      aspect-ratio: 4 / 3;
+      background: rgba(27, 28, 21, 0.08);
+    }
+    .employee-card__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .employee-role-badge {
+      display: inline-flex;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--color-secondary);
+      background: rgba(46,125,50,.1);
+      margin-bottom: .5rem;
+    }
+    .employee-quote {
+      margin: 0 0 .75rem;
+      color: var(--color-on-surface-variant);
+      font-style: italic;
+      line-height: 1.65;
+      padding-left: .75rem;
+      border-left: 2px solid rgba(175, 16, 26, 0.32);
+    }
+    .employee-contact {
+      margin: 0;
+      font-size: .88rem;
+      line-height: 1.7;
+      border-top: 1px dashed rgba(143, 111, 108, 0.4);
+      padding-top: .7rem;
+    }
+    @media (max-width: 860px) {
+      .journey-track::before,
+      .journey-progress {
+        left: 0.65rem;
+        transform: none;
+      }
+      .journey-track {
+        padding-left: 0.15rem;
+      }
+      .journey-item,
+      .journey-item:nth-child(even) {
+        width: calc(100% - 1.8rem);
+        margin-left: 1.8rem;
+        margin-right: 0;
+      }
+      .journey-item::before,
+      .journey-item:nth-child(odd)::before,
+      .journey-item:nth-child(even)::before {
+        left: -1.55rem;
+        right: auto;
+      }
+      .journey-highlight-card {
+        padding: 1rem 1rem;
+      }
+      .employee-contact {
+        word-break: break-word;
+      }
+      .employee-contact a {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .journey-card {
+        border-radius: 0.85rem;
+      }
+      .journey-item,
+      .journey-item:nth-child(even) {
+        width: calc(100% - 1.55rem);
+        margin-left: 1.55rem;
+      }
+      .journey-item::before,
+      .journey-item:nth-child(odd)::before,
+      .journey-item:nth-child(even)::before {
+        left: -1.35rem;
+      }
+      .journey-step {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.72rem;
+      }
+      .journey-tag {
+        font-size: 0.8rem;
+      }
+      #about-team-cards-root {
+        grid-template-columns: 1fr !important;
+      }
+      .employee-card {
+        border-radius: 0.85rem;
+      }
+      .employee-card__image-wrap {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .journey-track::before,
+      .journey-progress {
+        left: 0.5rem;
+      }
+      .journey-item,
+      .journey-item:nth-child(even) {
+        width: calc(100% - 1.35rem);
+        margin-left: 1.35rem;
+        margin-bottom: 0.9rem;
+      }
+      .journey-item::before,
+      .journey-item:nth-child(odd)::before,
+      .journey-item:nth-child(even)::before {
+        left: -1.2rem;
+        top: 0.95rem;
+      }
+      .journey-highlight-card {
+        gap: 0.65rem;
+        padding: 0.85rem 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body style="font-family:var(--font-body);background:var(--color-background);color:var(--color-on-surface)">
+<script src="../assets/js/shudh-first-paint.js"></script>
+<!-- SHARED HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-logo" aria-label="Shudh India Home">
+      <img src="../assets/logo/logonew.png" alt="Shudh India" class="site-logo__image" />
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="packages.html">Packages</a>
+      <a href="videos.html">Videos</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html" class="active">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="inquiry.html" class="site-header__cta">Get Quote <span class="material-symbols-outlined" style="font-size:1rem">arrow_forward</span></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="packages.html">Packages</a>
+  <a href="videos.html">Videos</a><a href="blog.html">Blog</a><a href="about.html" class="active">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+  <a href="inquiry.html" class="btn btn-primary" style="margin-top:.5rem;justify-content:center">Get Quote</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="page-hero__eyebrow about-hero-eyebrow">Our Story</span>
+  <h1 class="page-hero__title about-hero-title">About <span class="accent">Us</span></h1>
+  <p class="page-hero__subtitle about-hero-subtitle">Crafting memorable culinary experiences for over two decades</p>
+</div>
+
+<!-- THE VISIONARY -->
+<section class="section" style="background:var(--color-surface-container-low)">
+  <div class="section-inner">
+    <div class="shudh-two-col">
+      <div>
+        <div style="aspect-ratio:4/5;border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-elevated)">
+          <img class="about-vision-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnNPxd-ADUYUtlJDqko9HqJKTpJsXpxX3xIgWDDAlNp1cmUmvMtCbBkHkT2-ENRq4Wu6eyQTm-wtAchA3fhUEYoqoAPRgWkXEpcohiMo2xoL50iDSMsAxVJCg0Lgi8TNe_-iqbONEDfWCCv_ezejdia--xxgTh0X_T75vmGin1kjzAVqAV2akwrNkQxW4RtYKLlEcubhkp6_8p5uHicaGSQy-EJfDplXsKMz8sojcL7kNkmjV8OG-Rrk7Ol-u7xguw8NKttVIoKTJ" alt="Dr. Mala kumari" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+      </div>
+      <div>
+        <p class="about-vision-label" style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--color-secondary);margin-bottom:.6rem">The Visionary</p>
+        <h2 class="about-vision-name" style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,2.8rem);line-height:1.2;margin-bottom:.4rem">Dr. Mala kumari</h2>
+        <p class="about-vision-role" style="font-size:1rem;font-weight:600;color:var(--color-on-surface-variant);margin-bottom:1.2rem">Founder &amp; Managing Director</p>
+        <p class="about-vision-quote" style="font-style:italic;color:var(--color-on-surface-variant);font-size:1.03rem;line-height:1.8;margin-bottom:1.2rem">
+          "We didn't just want to serve food; we wanted to serve memories. My vision for Shudh India was to bring the sanctity of a home-cooked meal into the fast-paced corporate world, without compromising on quality or tradition."
+        </p>
+        <p class="about-vision-description" style="font-size:1.02rem;color:var(--color-on-surface-variant);line-height:1.75">
+          With over two decades of culinary expertise, Dr. Mala kumari founded Shudh India Catering with a single pot and a thousand dreams. Today, her philosophy of <strong style="color:var(--color-primary)">'Atithi Devo Bhava'</strong> (The Guest is God) guides every plate we serve.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELESS JOURNEY -->
+<section class="section">
+  <div class="section-inner">
+    <p class="about-journey-label" style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--color-secondary);margin-bottom:.6rem;text-align:center">Our</p>
+    <h2 class="about-journey-title" style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,2.75rem);text-align:center;margin-bottom:.5rem">Timeless Journey</h2>
+    <p class="about-journey-subtitle" style="text-align:center;color:var(--color-on-surface-variant);max-width:760px;margin:0 auto 2rem">We don't just count years; we count the milestones that defined us. Scroll to walk through our history.</p>
+
+    <div class="journey-highlight-card">
+      <div>
+        <p class="about-journey-highlight-label" style="margin:0;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--color-on-surface-variant)">Est.</p>
+        <p class="about-journey-highlight-year" style="margin:.2rem 0 0;font-family:var(--font-headline);font-weight:800;font-size:2rem;color:var(--color-primary);line-height:1">2008</p>
+      </div>
+      <p class="about-journey-highlight-text" style="margin:0;font-size:.9rem;color:var(--color-on-surface-variant)">20,000+ Happy Guests</p>
+    </div>
+
+    <div class="journey-track" id="journey-track">
+      <div class="journey-progress" id="journey-progress"></div>
+      <div id="about-journey-items-root">
+      <article class="journey-card journey-item" style="padding:1.35rem">
+        <p class="journey-step">01</p>
+        <h3 style="margin:0 0 .45rem;font-family:var(--font-headline);font-size:1.1rem;font-weight:700">2008: The Foundation</h3>
+        <p style="margin:0 0 .65rem;color:var(--color-on-surface-variant);font-size:.95rem;line-height:1.65">Shudh India starts as a small kitchen in Uttar Pradesh serving 50 tiffins a day. Our mission was simple: Pure, Sattvic food that nourishes the soul.</p>
+        <p class="journey-tag">Humble Beginnings</p>
+      </article>
+      <article class="journey-card journey-item" style="padding:1.35rem">
+        <p class="journey-step">02</p>
+        <h3 style="margin:0 0 .45rem;font-family:var(--font-headline);font-size:1.1rem;font-weight:700">2012: The Breakthrough</h3>
+        <p style="margin:0 0 .65rem;color:var(--color-on-surface-variant);font-size:.95rem;line-height:1.65">We bridged the gap between traditional taste and corporate efficiency. Major multinationals trusted us to fuel their workforce with hygiene and punctuality.</p>
+        <p class="journey-tag">First Corporate Contract</p>
+      </article>
+      <article class="journey-card journey-item" style="padding:1.35rem">
+        <p class="journey-step">03</p>
+        <h3 style="margin:0 0 .45rem;font-family:var(--font-headline);font-size:1.1rem;font-weight:700">2016: Innovation</h3>
+        <p style="margin:0 0 .65rem;color:var(--color-on-surface-variant);font-size:.95rem;line-height:1.65">Opened our state-of-the-art central kitchen. Introduced automated roti makers and eco-friendly packaging to meet growing demand.</p>
+        <p class="journey-tag">Technological Leap</p>
+      </article>
+      <article class="journey-card journey-item" style="padding:1.35rem">
+        <p class="journey-step">04</p>
+        <h3 style="margin:0 0 .45rem;font-family:var(--font-headline);font-size:1.1rem;font-weight:700">2020: Resilience</h3>
+        <p style="margin:0 0 .65rem;color:var(--color-on-surface-variant);font-size:.95rem;line-height:1.65">During global challenges, we set the benchmark for hygiene, introducing 'Touch-Free Buffet' systems for essential workers.</p>
+        <p class="journey-tag">Safety First</p>
+      </article>
+      <article class="journey-card journey-item" style="padding:1.35rem">
+        <p class="journey-step">05</p>
+        <h3 style="margin:0 0 .45rem;font-family:var(--font-headline);font-size:1.1rem;font-weight:700">Today: The Grand Scale</h3>
+        <p style="margin:0 0 .65rem;color:var(--color-on-surface-variant);font-size:.95rem;line-height:1.65">Experience isn't just time; it's capacity. Today, our centralized kitchens and logistics network allow us to execute gala events for thousands seamlessly.</p>
+        <p class="journey-tag">20,000+ Happy Guests</p>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS OF EXCELLENCE -->
+<section class="section" style="background:var(--color-surface-container)">
+  <div class="section-inner">
+    <h2 class="about-pillars-title" style="font-family:var(--font-headline);font-weight:800;font-size:clamp(1.75rem,3.5vw,2.75rem);text-align:center;margin-bottom:.5rem">The Pillars of Excellence</h2>
+    <p class="about-pillars-subtitle" style="text-align:center;color:var(--color-on-surface-variant);max-width:720px;margin:0 auto 2.25rem">Behind every successful event is a dedicated team ensuring perfection.</p>
+    <div id="about-team-cards-root" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
+      <article class="card employee-card" style="padding:1.35rem">
+        <div class="employee-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&w=900&q=80" alt="Komal Umar - HR Manager"/>
+        </div>
+        <p class="employee-role-badge">HR Manager</p>
+        <h3 style="margin:0 0 .2rem;font-family:var(--font-headline);font-size:1.22rem;font-weight:700">Komal Umar</h3>
+        <p style="margin:0 0 .7rem;color:var(--color-on-surface-variant);font-size:.92rem">Head of Human Resources</p>
+        <p class="employee-quote">"Building a family, not just a workforce. We ensure every staff member carries the values of Shudh India."</p>
+        <p class="employee-contact"><a href="mailto:shudh.hrkomal@gmail.com" style="color:var(--color-primary)">shudh.hrkomal@gmail.com</a><br/><a href="tel:+919621051619" style="color:var(--color-on-surface-variant)">+91 9621051619</a></p>
+      </article>
+      <article class="card employee-card" style="padding:1.35rem">
+        <div class="employee-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Madhukar Tripathi - Administration"/>
+        </div>
+        <p class="employee-role-badge">Administration</p>
+        <h3 style="margin:0 0 .2rem;font-family:var(--font-headline);font-size:1.22rem;font-weight:700">Madhukar Tripathi</h3>
+        <p style="margin:0 0 .7rem;color:var(--color-on-surface-variant);font-size:.92rem">Administration</p>
+        <p class="employee-quote">"Organization is my strength. From planning workflows to managing operations, I keep everything aligned and on track."</p>
+        <p class="employee-contact"><a href="mailto:madhukartripathi2020@gmail.com" style="color:var(--color-primary)">madhukartripathi2020@gmail.com</a><br/><a href="tel:+919151088270" style="color:var(--color-on-surface-variant)">+91 9151088270</a></p>
+      </article>
+      <article class="card employee-card" style="padding:1.35rem">
+        <div class="employee-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="Sunaina Yadav - Accountant"/>
+        </div>
+        <p class="employee-role-badge">Accountant</p>
+        <h3 style="margin:0 0 .2rem;font-family:var(--font-headline);font-size:1.22rem;font-weight:700">Sunaina Yadav</h3>
+        <p style="margin:0 0 .7rem;color:var(--color-on-surface-variant);font-size:.92rem">Accountant</p>
+        <p class="employee-quote">"Accuracy is my craft. From the first entry to the final balance, I ensure financial clarity."</p>
+        <p class="employee-contact"><a href="mailto:yadavsunaina754@gmail.com" style="color:var(--color-primary)">yadavsunaina754@gmail.com</a><br/><a href="tel:+916387343878" style="color:var(--color-on-surface-variant)">+91 6387343878</a></p>
+      </article>
+      <article class="card employee-card" style="padding:1.35rem">
+        <div class="employee-card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80" alt="Mahima Chaudhary - Team Member"/>
+        </div>
+        <p class="employee-role-badge">Team member</p>
+        <h3 style="margin:0 0 .2rem;font-family:var(--font-headline);font-size:1.22rem;font-weight:700">Mahima Chaudhary</h3>
+        <p style="margin:0 0 .7rem;color:var(--color-on-surface-variant);font-size:.92rem">Team Member</p>
+        <p class="employee-quote" style="font-style:normal">Dedicated to service excellence and seamless guest experiences.</p>
+        <p class="employee-contact"><a href="mailto:mahichaudhary.sudh@gmail.com" style="color:var(--color-primary)">mahichaudhary.sudh@gmail.com</a><br/><a href="tel:+919621051620" style="color:var(--color-on-surface-variant)">+91 9621051620</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Let's plan your next event</h2>
+  <p>Our culinary architects are ready to design your perfect menu for any occasion.</p>
+  <a href="inquiry.html" class="btn" style="background:#fff;color:var(--color-primary);padding:.9rem 2.5rem;font-size:1rem;margin:0 auto">Get Quote</a>
+</section>
+
+<!-- SHARED FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="footer-brand__logo">
+        <img src="../assets/logo/logonew.png" alt="Shudh India" class="footer-brand__image" />
+      </div>
+      <p class="footer-brand__desc">Pioneering the art of Indian catering for over two decades. We combine ancestral recipes with avant-garde presentation.</p>
+      <div class="footer-socials">
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">share</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">thumb_up</span></a>
+        <a href="#"><span class="material-symbols-outlined" style="font-size:1.1rem">camera</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Signature</h4>
+      <div class="footer-tags">
+        <span class="footer-tag">Aromatic Spices</span>
+        <span class="footer-tag">Farm Fresh</span>
+        <span class="footer-tag">Artisanal Plating</span>
+        <span class="footer-tag">Vegan Friendly</span>
+      </div>
+      <p class="footer-cert">View Hygiene Certification</p>
+      <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem">
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Call Us:</strong> +91 98765 43210</p>
+        <p style="font-size:.875rem;color:#71717a"><strong style="color:var(--color-on-surface)">Email:</strong> concierge@shudhindia.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>© 2024 Shudh India Catering. Artisanal Culinary Excellence.</p>
+    <div style="display:flex;gap:1.5rem">
+      <a href="#" style="color:#71717a;font-size:.8125rem">Privacy Policy</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">Terms</a>
+      <a href="#" style="color:#71717a;font-size:.8125rem">FAQ</a>
+    </div>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/public-content.js"></script>
+<script src="../assets/js/public-site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".journey-item").forEach(function (item, idx) {
+      gsap.from(item, {
+        opacity: 0,
+        y: 48,
+        duration: 0.9,
+        ease: "power3.out",
+        delay: idx * 0.03,
+        scrollTrigger: {
+          trigger: item,
+          start: "top 86%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+    gsap.to("#journey-progress", {
+      scaleY: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#journey-track",
+        start: "top 78%",
+        end: "bottom 28%",
+        scrub: 0.8
+      }
+    });
+  }
+</script>
+</body>
+</html>
